@@ -1,0 +1,564 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.intro {
+    width: 100%;
+    padding: 40px;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--background-navy-blue);
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(2, 480px);
+}
+
+.mumboJumbo {grid-column: 1;}
+.jumboMumbo {grid-column: 2;}
+
+.two {
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+.widgetSection {
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    gap: 30px;
+}
+
+.widget {
+    height: 450px;
+    background-color: var(--background-widget-gray);
+    border-radius: 1rem;
+}
+
+.widgetDashboard {
+    height: 540px;
+    background-color: var(--background-widget-gray);
+    border-radius: 1rem;
+}
+
+.thiccWidget {
+    height: 200px;
+    background-color: var(--background-widget-gray);
+    border-radius: 1rem;
+    grid-column: 1 / 3;
+}
+
+.thiccWidgetSales {
+    height: 250px;
+    background-color: var(--background-widget-gray);
+    border-radius: 1rem;
+    grid-column: 1 / 3;
+}
+
+.widgetFAQ {
+    height: fit-content;
+    padding-bottom: 25px;
+    background-color: var(--background-widget-gray);
+    border-radius: 1rem;
+    grid-column: 1 / 3;
+}
+
+/* Fancy widget with image */
+/* Fancy widget with image */
+/* Fancy widget with image */
+
+.thiccWidgetCut {
+    height: 380px;
+    background-color: var(--background-widget-gray);
+    border-radius: 1rem;
+    grid-column: 1 / 3;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.widgetDescriptionCut {
+    color: rgb(107 114 128);
+    font-weight: normal;
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-right: 10px;
+    grid-column: 1/3;
+}
+
+.widgetImage {
+    height: 270px;
+    width: 405px;
+    margin: auto;
+}
+
+/* Fancy widget with image */
+/* Fancy widget with image */
+/* Fancy widget with image */
+
+
+.recentEmail {
+    margin-right: 10px;
+    background-color: var(--background-widget-gray-l2);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* TEXT STYLING WOOOO */
+.headingWhite {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color-main-onblue);
+    margin-bottom: 0;
+}
+
+.descriptionWhite {
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--text-color-description-onblue);
+    margin-bottom: 25px;
+}
+
+.headingBlue {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color-main-onwhite);
+    margin-bottom: 0; 
+    padding: 20px;
+}
+
+.widgetDescription {
+    color: rgb(107 114 128);
+    font-weight: normal;
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.anchor {
+    color: var(--accent-color-link);
+    font-weight: bold;
+}
+
+.anchor:hover {
+    opacity: 0.7;
+    transition: opacity 0.5s;
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: rgb(107 114 128);
+    vertical-align: middle;
+}
+
+/* BASIC BUTTON STYLES WOOO */
+.whiteButton {
+    margin-right: 10px;
+
+    align-items: center;
+    border-radius: .375rem;
+    display: inline-flex;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.5rem;
+    padding: .625rem 1.5rem;
+    /* I need to figure this out */
+    background-color: rgb(255, 255, 255);
+    /* I think this font-size is everywhere for buttons */
+    font-size: 1rem;
+}
+
+.blueButton {
+    margin-right: 10px;
+
+    align-items: center;
+    border-radius: .375rem;
+    display: inline-flex;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.5rem;
+    padding: .625rem 1.5rem;
+    /* I need to figure this out */
+    background-color: var(--background-navy-blue);
+    color: white;
+    /* I think this font-size is everywhere for buttons */
+    font-size: 1rem;
+}
+
+.transparentButton {
+    margin-right: 10px;
+
+    align-items: center;
+    border-radius: .375rem;
+    display: inline-flex;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.5rem;
+    padding: .625rem 1.5rem;
+    /* I need to figure this out */
+    background-color: transparent;
+    border: 2px solid rgb(75, 85, 99);
+    color: white;
+    /* I think this font-size is everywhere for buttons */
+    font-size: 1rem;
+}
+
+.whiteButton:hover {
+    opacity: 0.7;
+    transition: opacity 0.5s;
+}
+
+.blueButton:hover {
+    opacity: 0.7;
+    transition: opacity 0.5s;
+}
+
+.transparentButton:hover {
+    background-color: rgb(75, 85, 99);
+    transition: background-color 0.5s
+}
+
+.widgetInput {
+    padding: .625rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    width: 70%;
+    border: none;
+    background-color: white;
+}
+
+.widgetInput:disabled {
+    background-color: var(--background-widget-gray-l2);
+    cursor: not-allowed;
+}
+
+
+/* Image Intro Styles */
+.imgIntro {
+    height: 300px;
+    width: auto;
+    margin-left: 60px;
+}
+
+/* TopBar */
+.topbar {
+    background-color: var(--background-navy-blue);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 480px);
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.logo {
+    color: white;
+    margin-left: 40px;
+    font-size: 2.5rem;
+    grid-column: 1;
+    justify-self: start;
+    align-items: center;
+}
+
+.logoImg {
+    height: 64px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.menuOptions {
+    list-style: none;
+    color: var(--text-color-description-onblue);
+    font-size: 1rem;
+    display: inline-block;
+    grid-column: 2;
+    justify-self: center;
+}
+
+.menuOption {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menuOption:hover {
+    opacity: 0.7;
+    transition: opacity 0.1s;
+}
+
+
+/* For them tablets */ 
+@media screen and (max-width: 1000px) {
+    .intro {
+        height: 410px;
+        padding: 20px;
+        grid-template-columns: repeat(2, 400px);
+    }
+
+    .mumboJumbo {
+        margin-left: 20px;
+    }
+
+    .jumboMumbo {
+        margin-right: 20px;
+    }
+
+    .topbar {
+        grid-template-columns: repeat(2, 400px);
+        gap: 0px;
+        border: none;
+    }
+
+    .logo {
+        justify-self: start;
+        margin-left: 0px;
+    }
+    
+
+    .widgetSection {
+        grid-template-columns: repeat(2, 350px);
+        grid-auto-flow: row;
+    }
+
+    .widget {
+        width: 350px;
+        height: 490px;
+    }
+
+    .widgetDashboard {
+        width: 350px;
+        height: 630px;
+    }
+
+    .thiccWidget {
+        grid-column: 1/3;
+        height: 280px;
+    }
+
+    .thiccWidgetSales {
+        grid-column: 1/3;
+        height: 300px;
+    }
+
+    .widgetFAQ {
+        height: fit-content;
+        grid-column: 1 / 3;
+    }
+
+    .thiccWidgetCut {
+        height: 400px;
+    }
+    
+    .widgetImage {
+        height: 55%;
+        width: 90%;
+        margin: auto;
+    }
+    
+}
+
+/* For them phones */
+@media screen and (max-width: 768px) {
+    .intro {
+        height: 410px;
+        padding: 20px;
+        grid-template-columns: repeat(1, 400px);
+    }
+
+    .imgIntro {
+        display: none;
+    }
+
+    .topbar {
+        grid-template-columns: repeat(1, 480px);
+        gap: 0px;
+        border: none;
+    }
+
+    .logo {
+        justify-self: center;
+        margin-left: 0px;
+    }
+    .menuOptions {
+        display: none;
+    }
+
+    .widgetSection {
+        grid-template-columns: repeat(1, 400px);
+        grid-auto-flow: row;
+    }
+
+    .widget {
+        width: 400px;
+        min-height: fit-content;
+    }
+
+    .widgetDashboard {
+        width: 400px;
+
+    }
+
+    .thiccWidget {
+        grid-column: 1/2;
+        height: 400px;
+        width: 400px;
+    }
+
+    .thiccWidgetSales {
+        grid-column: 1/2;
+        height: 360px;
+        width: 400px;
+    }
+
+    .widgetFAQ {
+        height: fit-content;
+        width: 400px;
+        grid-column: 1 / 2;
+    }
+
+    .thiccWidgetCut {
+        grid-column: 1/2;
+        height: 400px;
+        width: 400px;
+        background-color: var(--background-widget-gray);
+        border-radius: 1rem;
+    
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .widgetImage {
+        display: none;
+    }
+}
+
+/* MISC */
+.footerContainer {
+    color: var(--white);
+    height: fit-content;
+    width: 100%;
+    background-color: var(--background-navy-blue);
+    bottom: 0;
+}
+.footer {
+    color: var(--white);
+    height: fit-content;
+    width: 100%;
+    background-color: var(--background-navy-blue);
+    bottom: 0;
+
+    /*display: grid;
+    grid-template-columns: repeat(2, 400px);
+    justify-content: center;*/
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footerInCenter {
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--text-color-description-onblue);
+    text-align: center;
+    grid-column: 1/3;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-wrap: nowrap;
+    padding-bottom: 30px;
+}
+
+.footerHref,
+.descriptionWhite {
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--text-color-description-onblue);
+    margin-bottom: 15px;
+
+}
+
+.footerHref:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.footerSide, .footerSideLeft, .footerSideSecret {
+    width: 300px;
+    margin: 20px;
+}
+
+.footerSideLeft {
+    text-align: right;
+}
+
+.footerSideSecret {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 680px) {
+    .hookText {
+        font-size: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .reelinText, .secondaryReelinText {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .miniSectionText {
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    .miniSectionMiniText {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .marketingImageHome {
+        height: auto;
+        width: 400px;
+    }
+
+    .footer {
+        height: fit-content;
+    }
+
+    .footerSideLeft {
+        display: none !important;
+    }
+
+    .footerSideSecret {
+        display: block !important;
+    }
+
+}
+
+
+.producthunt {
+    height: 45px;
+    vertical-align: top;
+    display: inline;
+}
+
+.buttonPH {
+    white-space: nowrap;
+}
+
+/* style={{width: '250px', height: '54px'}} width="250" height="54" */

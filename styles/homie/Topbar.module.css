@@ -1,0 +1,76 @@
+.topbar {
+    background-color: var(--white);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 480px);
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.logo {
+    color: var(--navy);
+    margin-left: 40px;
+    font-size: 2.5rem;
+    grid-column: 1;
+    justify-self: start;
+    align-items: center;
+}
+
+.logoImg {
+    height: 64px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.menuOptions {
+    list-style: none;
+    color: var(--text-sharp);
+    font-size: 1rem;
+    display: inline-block;
+    grid-column: 2;
+    justify-self: center;
+}
+
+.menuOption {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menuOption:hover {
+    opacity: 0.7;
+    transition: opacity 0.1s;
+}
+
+@media screen and (max-width: 1000px) {
+    .topbar {
+        grid-template-columns: repeat(2, 400px);
+        gap: 0px;
+        border: none;
+    }
+
+    .logo {
+        justify-self: start;
+        margin-left: 0px;
+    }
+}
+
+/* For them phones */
+@media screen and (max-width: 768px) {
+
+    .topbar {
+        grid-template-columns: repeat(1, 480px);
+        gap: 0px;
+        border: none;
+    }
+
+    .logo {
+        justify-self: center;
+        margin-left: 0px;
+    }
+    .menuOptions {
+        display: none;
+    }
+
+}
