@@ -5,17 +5,13 @@
 import Head from 'next/head'
 import React from "react"
 import styles from '../../styles/Home.module.css'
+import axios from 'axios'
 
-// thank you.
-import DOMPurify from 'isomorphic-dompurify';
-
-export default function Preview(props) {
-
-    // HOOOOLLLLLY FUCKING SHIT THIS WAS XSS WORLD! DISNEY WOULD'VE LOVED TO MAKE A PARK OUT OF THIS 
+export default function Preview(email) {
+    console.log(JSON.stringify(email.email.email.bodies.html))
 
     function getData() {
-        const safe =  DOMPurify.sanitize(props.ejson.email.bodies.html, {FORCE_BODY: true})
-        return {__html: safe}
+        return {__html: email.email.email.bodies.html}
     }
 
 
@@ -53,11 +49,9 @@ export default function Preview(props) {
     )
 }
 
-
 export async function getServerSideProps(context) {
     const { id } = context.query;
-    const email = await fetch(`https://takeout.bysourfruit.com/api/get/preview?ekey=${id}`)
-    const ejson = await email.json()
+    const dataz = await axios.get(`https://takeout.bysourfruit.com/api/get/preview?ekey=${id}`)
 
-    return {props: {ejson}}
+    return {props: {email: dataz.data}}
 }
