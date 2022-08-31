@@ -5,19 +5,17 @@
 import Head from 'next/head'
 import React from "react"
 import styles from '../../styles/Home.module.css'
-
 // thank you.
 import DOMPurify from 'isomorphic-dompurify';
 
 export default function Preview(props) {
-
     // HOOOOLLLLLY FUCKING SHIT THIS WAS XSS WORLD! DISNEY WOULD'VE LOVED TO MAKE A PARK OUT OF THIS 
-
     function getData() {
         const safe =  DOMPurify.sanitize(props.ejson.email.bodies.html, {FORCE_BODY: true})
         return {__html: safe}
     }
 
+    // Can we just talk about how if DOMPurify gets fucked so do I?
 
     return (
         <div className={styles.container}>
