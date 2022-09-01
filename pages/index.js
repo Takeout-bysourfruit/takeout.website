@@ -171,7 +171,7 @@ export default function Home(props) {
                             <ul className={styles.pricingList} style={{ marginBottom: '40px' }}>
                                 <li className={styles.pricingListLI}>✅ Send up to 500 emails per month</li>
                                 <li className={styles.pricingListLI}>✅ Access to Takeout's API and packages</li>
-                                <li className={styles.pricingListLI}>❌ <span className={styles.striketh}>Setting a custom emails</span></li>
+                                <li className={styles.pricingListLI}>❌ <span className={styles.striketh}>Setting a custom email</span></li>
                                 <li className={styles.pricingListLI}>❌ <span className={styles.striketh}>Early-access to new features</span></li>
                                 <li className={styles.pricingListLI}>❌ <span className={styles.striketh}>Priority Support</span></li>
                             </ul>
