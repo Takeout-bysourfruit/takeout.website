@@ -57,5 +57,7 @@ export async function getServerSideProps(context) {
     const email = await fetch(`https://takeout.bysourfruit.com/api/get/preview?ekey=${id}`)
     const ejson = await email.json()
 
+    try {if (ejson.email.bodies.html === undefined) console.log('Not found')} catch {return {notFound: true}}
+
     return {props: {ejson}}
 }

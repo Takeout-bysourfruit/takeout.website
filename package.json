@@ -12,31 +12,31 @@
         "@paypal/react-paypal-js": "^7.8.1",
         "axios": "^0.27.2",
         "deta": "^1.1.0",
-        "dotenv": "^16.0.1",
+        "dotenv": "^16.0.2",
         "email-smtp-verificator": "^1.0.0",
-        "emailjs": "^4.0.0",
-        "express-rate-limit": "^6.4.0",
+        "emailjs": "^4.0.1",
+        "express-rate-limit": "^6.5.2",
         "express-slow-down": "^1.4.0",
         "fs": "^0.0.1-security",
         "isomorphic-dompurify": "^0.22.0",
         "lodash": "^4.17.21",
-        "next": "12.2.0",
-        "next-auth": "^4.9.0",
+        "next": "12.2.5",
+        "next-auth": "^4.10.3",
         "nextjs-cors": "^2.1.1",
         "phosphor-react": "^1.4.1",
         "prismjs": "^1.29.0",
         "qs": "^6.11.0",
         "react": "18.2.0",
-        "react-countup": "^6.3.0",
+        "react-countup": "^6.3.1",
         "react-dom": "18.2.0",
         "react-modal": "^3.15.1",
         "react-switch": "^7.0.0",
         "regexcensor": "^1.0.4",
         "round": "^2.0.1",
-        "takeout.js": "^0.0.9"
+        "takeout.js": "^1.2.1"
     },
     "devDependencies": {
-        "eslint": "8.19.0",
-        "eslint-config-next": "12.2.0"
+        "eslint": "8.23.0",
+        "eslint-config-next": "12.2.5"
     }
 }
