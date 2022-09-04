@@ -8,7 +8,7 @@ import styles from '../styles/homie/Revamp.module.css'
 import TopBar from '../components/homie/topbar'
 import Footer from '../components/footer'
 import PayPal from '../components/homie/paypal'
-
+import * as Icon from "phosphor-react";
 
 import Head from 'next/head'
 import React from "react"
@@ -20,17 +20,17 @@ import axios from 'axios';
 
 export default function Home(props) {
     const [href, setHREF] = useState('/flow/on-board')
-    const [buttText, setText] = useState('Get started with Takeout 👀')
+    const [buttText, setText] = useState('Get started')
     const [sent, setSent] = useState(0)
     const [takeoutPlus, setTakeout] = useState(false)
-    
+
     const [randomHTML, setRandomHTML] = useState(<div style={{ marginTop: '40px' }}><a onClick={() => { signIn('github', { callbackUrl: '/#pricing' }) }} className={styles.blueButton}>Login to subscribe</a><h4 className={styles.tinyPrint}>You'll have to login in order to subscribe to Takeout+</h4></div>)
     const { data: session, status } = useSession()
 
     useEffect(() => {
         if (status === "authenticated") {
             setHREF('/dashboard')
-            setText('Explore Takeout\'s Dashboard 👀')
+            setText('Get emailin\'')
         }
         setSent(round(`${props.allSent.stats}`, 50, 'up'))
     }, [status, props.allSent.status])
@@ -98,15 +98,28 @@ export default function Home(props) {
             <TopBar />
             <main className={styles.main} style={{ marginTop: '30px' }}>
                 <section className={styles.firstHomeSection} style={{ marginBottom: '100px' }}>
-                    <h1 className={styles.hookText} style={{ marginBottom: '30px' }}>
-                        Sending emails to users has never been easier
-                    </h1>
-                    <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
-                        Use Takeout and send transactional emails to millions without fear of being charged extraordinary amounts.
-                    </h2>
-                    <a href={href} className={styles.blueButton}>{buttText}</a>
-                    <br/><br/>
-                    <a href="https://www.producthunt.com/posts/takeout?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-takeout" target="_blank"><img className={styles.producthunt} src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=356489&theme=light" alt="Takeout - Just&#0032;another&#0032;email&#0032;service&#0046;&#0032;But&#0032;10x&#0032;better&#0046; | Product Hunt" /></a>
+                    <div className={styles.firstDivImage}>
+                        <img src="sentsucc.png" width='300px' />
+                    </div>
+
+                    <div className={styles.firstDivText}>
+                        <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
+                            The easier way to <b>send emails to millions</b>
+                        </h1>
+                        <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
+                            Use Takeout and send millions of transactional emails without fear of being charged extraordinary amounts.
+                        </h2>
+                        <div className={styles.buttonContainer}>
+                            <a href={href} className={styles.blueButton} style={{verticalAlign: 'middle'}}>{buttText} <Icon.CaretRight className={styles.buttIcon} style={{fontSize: '1.1rem'}} weight='bold' /> </a>
+                            <div className={styles.buttonTextInside}>
+                                <b>Start building with Takeout for free.</b>
+                                <br/>
+                                <span className={styles.skinnyText}>Questions? <a className={styles.supportLink} href="mailto:takeout@bysourfruit.com?subject=Question about Takeout">Contact our support team</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </section>
 
 
@@ -118,29 +131,28 @@ export default function Home(props) {
 
 
                 <section className={styles.furtherSections} style={{ marginBottom: '100px' }}>
-                    <h1 className={styles.secondaryHookText} style={{ marginBottom: '30px' }}>
-                        Set Takeout up in minutes
-                    </h1>
-                    <h2 className={styles.secondaryReelinText}>
-                        With easy to use packages (JavaScript and Python, more coming soon) and a simple yet well-documented API allows developers to quickly send emails using any programming language and an internet connection.
-                    </h2>
-                    <img src="https://i.ibb.co/HCHTVSb/Marketing-Image-4.png" className={styles.marketingImageHome} />
-                    
-                    {/*<img src="https://i.ibb.co/hgTQ5Hz/Marketing-Image-3.png" className={styles.marketingImageHome} /> */}
-                </section>
-
-
-
-                {/*<section className={styles.miniHomeSection2} style={{ marginBottom: '150px' }}>
-                    <div className={styles.miniSection2Card}>
-                    <h1 className={styles.miniSectionText}>
-                        Amazing deliverability
-                    </h1>
-                    <h2 className={styles.miniSectionMiniText} style={{marginTop: '-70px'}}>
-                            Takeout isn't meant to send promotional emails, and we're making sure those emails are sent through the same, but different infrastructure. This work allows your transactional emails to almost never make it into someone's spam folder.
+                    <div className={styles.firstDivText}>
+                        <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
+                            Set Takeout up <b>in minutes</b>
+                        </h1>
+                        <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
+                            With easy to use packages (JavaScript and Python, more coming soon) and a simple yet well-documented API allows developers to quickly send emails using any programming language and an internet connection.
                         </h2>
-                    </div></section>*/}
+                        <div className={styles.buttonContainer}>
+                            <a href='https://takeout.js.org' className={styles.blueButton} style={{verticalAlign: 'middle'}}>Takeout.js <Icon.CaretRight className={styles.buttIcon} style={{fontSize: '1.1rem'}} weight='bold' /> </a>
+                            <a href='https://github.com/Takeout-bysourfruit/takeout.py' className={styles.blueButton} style={{verticalAlign: 'middle'}}>Takeout.py <Icon.CaretRight className={styles.buttIcon} style={{fontSize: '1.1rem'}} weight='bold' /> </a>
+                        </div>
+                        <br/>
+                        <div className={styles.buttonTextInside} style={{lineHeight: '25px'}}>
+                                <b>Can't find a package for your language?</b><br/>
+                                <span className={styles.skinnyText}>We encourage others to build API wrappers for Takeout, <br/> or <a className={styles.supportLink} href='https://github.com/Takeout-bysourfruit/takeout.docs#using-the-api-'>use the API yourself.</a></span>
+                        </div>
+                    </div>
 
+                    <div className={styles.secondDivImage}>
+                        <img src="code/odp.png" className={styles.marketingImageHome} />
+                    </div>
+                </section>
 
 
                 <section className={styles.miniHomeSection} style={{ marginBottom: '100px' }}>
@@ -196,9 +208,9 @@ export default function Home(props) {
                             {/* 
                             DO THE RANDOM HTML BULLSHIT
                             <PayPal id="thefuckingPayPal" />
-                            */} 
+                            */}
                             {randomHTML}
-                            
+
                         </div>
                     </div>
                 </section>

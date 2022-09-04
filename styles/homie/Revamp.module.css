@@ -1,14 +1,56 @@
-.firstHomeSection,
-.furtherSections {
+.firstHomeSection, .furtherSections {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    align-items: center;
+    gap: 100px;
+
+    justify-content: center !important;
+    flex-wrap: wrap;
+}
+
+.firstDivText {
+    max-width: 500px;
+}
+
+.spacingAa {
+    margin: 10px !important;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    line-height: 25px;
+}
+
+.supportLink {
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+}
+
+
+/*.furtherSections {
     text-align: center;
     max-width: 800px;
     margin: auto;
+}*/
+
+.marketingImageHome {
+    width: 300px;
 }
 
 .hookText {
     font-size: 50px;
     color: var(--text-sharp);
-    font-weight: 700;
+    font-weight: bold;
+    margin: 0;
+}
+
+.homeHook {
+    font-size: 50px;
+    color: var(--text-sharp);
+    font-weight: 400;
     margin: 0;
 }
 
@@ -129,7 +171,7 @@
     background-color: var(--navy);
     color: var(--text-white);
     box-shadow: 0 10px 20px -10px var(--shadow-navy);
-
+    
     border-radius: .375rem;
     font-weight: 500;
     line-height: 1.5rem;
@@ -138,6 +180,10 @@
     font-size: 1.1rem;
 }
 
+.buttIcon {
+    top: 3px;
+    position: relative;
+}
 
 .blueButton:hover {
     opacity: 0.7;
@@ -217,7 +263,30 @@
 
 
 @media screen and (max-width: 680px) {
-    .hookText {
+    .firstHomeSection {
+        display: flex;
+        max-width: 900px;
+        margin: auto;
+        align-items: center;
+        gap: 100px;
+        padding: 10px;
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+
+    .furtherSections {
+        padding: 10px;
+    }
+
+    .buttonContainer {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        line-height: 25px;
+    }
+
+    .hookText, .homeHook {
         font-size: 40px;
         padding-left: 10px;
         padding-right: 10px;
@@ -225,6 +294,16 @@
 
     .reelinText, .secondaryReelinText {
         font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .buttonContainer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .buttonTextInside {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -239,10 +318,6 @@
         font-size: 20px;
     }
 
-    .marketingImageHome {
-        height: auto;
-        width: 400px;
-    }
 
     .footer {
         height: fit-content;
