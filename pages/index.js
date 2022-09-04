@@ -143,9 +143,9 @@ export default function Home(props) {
                             <a href='https://github.com/Takeout-bysourfruit/takeout.py' className={styles.blueButton} style={{verticalAlign: 'middle'}}>Takeout.py <Icon.CaretRight className={styles.buttIcon} style={{fontSize: '1.1rem'}} weight='bold' /> </a>
                         </div>
                         <br/>
-                        <div className={styles.buttonTextInside} style={{lineHeight: '25px'}}>
+                        <div className={styles.buttonTextInside2} style={{lineHeight: '25px'}}>
                                 <b>Can't find a package for your language?</b><br/>
-                                <span className={styles.skinnyText}>We encourage others to build API wrappers for Takeout, <br/> or <a className={styles.supportLink} href='https://github.com/Takeout-bysourfruit/takeout.docs#using-the-api-'>use the API yourself.</a></span>
+                                <span className={styles.skinnyText}>We encourage others to build API wrappers for Takeout, or you can <a className={styles.supportLink} href='https://github.com/Takeout-bysourfruit/takeout.docs#using-the-api-'>use the API yourself.</a></span>
                         </div>
                     </div>
 

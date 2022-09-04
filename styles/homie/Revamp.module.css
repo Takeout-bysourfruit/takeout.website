@@ -303,7 +303,7 @@
         padding-right: 10px;
     }
 
-    .buttonTextInside {
+    .buttonTextInside2 {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -347,6 +347,7 @@
 .fuckPayPal {
     z-index: 1 !important;
 }
+
 /* old color border 
     
     border-image-source: linear-gradient(-90deg, #6a581c, #aa8c2c);
