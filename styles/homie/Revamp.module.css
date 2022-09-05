@@ -80,18 +80,18 @@
 
 /* the blue sections that are small */
 
-
 .miniHomeSection {
     display: grid;
-    background-color: var(--navy);
-    height: 250px;
+    background-color: var(--background-widget-gray);
+    height: auto;
+    min-height: 280px;
     text-align: center !important;
     align-items: center;
 }
 
 .miniSectionText {
     font-size: 50px;
-    color: var(--text-white);
+    color: var(--text-sharp);
     font-weight: 700;
     max-width: 600px;
     margin: 0 auto;
@@ -99,7 +99,7 @@
 
 .miniSectionMiniText {
     font-size: 20px;
-    color: var(--text-white);
+    color: var(--text-light);
     font-weight: 400;
     max-width: 600px;
     margin: 0 auto;

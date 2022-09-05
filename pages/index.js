@@ -118,8 +118,6 @@ export default function Home(props) {
                             </div>
                         </div>
                     </div>
-
-
                 </section>
 
 
@@ -165,13 +163,23 @@ export default function Home(props) {
                 </section>
 
 
+                <section className={styles.furtherSections} style={{ marginBottom: '50px' }}>
+                    <div className={styles.firstDivImage}>
+                        <img src="pig.png" width='300px' />
+                    </div>
+
+                    <div className={styles.firstDivText}>
+                        <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
+                            The most affordable way to <b>send emails to millions</b>
+                        </h1>
+                        <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
+                            Takeout's pricing structure is extremely simple, and provides amazing features for $3 a month. 
+                        </h2>
+
+                    </div>
+                </section>
+
                 <section className={styles.pricingHome} style={{ marginBottom: '100px' }} id="pricing">
-                    <h1 className={styles.secondaryHookText} style={{ marginBottom: '30px' }}>
-                        Pricing
-                    </h1>
-                    <h2 className={styles.secondaryReelinText} style={{ marginBottom: '60px' }}>
-                        Explore Takeout's simple pricing structure.
-                    </h2>
                     <div className={styles.pricingCards}>
                         <div className={styles.pricingCardSingle}>
                             <h1 className={styles.pricingCardTier}>

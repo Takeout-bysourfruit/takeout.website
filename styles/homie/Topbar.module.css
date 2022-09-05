@@ -1,5 +1,5 @@
 .topbar {
-    background-color: var(--white);
+    background-color: var(--off-white);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 480px);
