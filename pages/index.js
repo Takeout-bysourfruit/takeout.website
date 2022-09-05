@@ -189,11 +189,13 @@ export default function Home(props) {
                                 Perfect for small projects.<br />Free, forever.
                             </h2>
                             <ul className={styles.pricingList} style={{ marginBottom: '40px' }}>
-                                <li className={styles.pricingListLI}>✅ Send up to 500 emails per month</li>
-                                <li className={styles.pricingListLI}>✅ Access to Takeout's API and packages</li>
-                                <li className={styles.pricingListLI}>❌ <span className={styles.striketh}>Setting a custom email</span></li>
-                                <li className={styles.pricingListLI}>❌ <span className={styles.striketh}>Early-access to new features</span></li>
-                                <li className={styles.pricingListLI}>❌ <span className={styles.striketh}>Priority Support</span></li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Send up to 500 emails per month</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Access to Takeout's API/packages</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> View recently sent emails</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Open/bounce detection</li>
+                                <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Setting a custom email</span></li>
+                                <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Early-access to new features</span></li>
+                                <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Priority Support</span></li>
                             </ul>
                             <a href="https://github.com/Takeout-bysourfruit/takeout.docs" className={styles.blueButton}>Read Takeout's documentation</a>
                             <h4 className={styles.tinyPrint}>You're automatically enrolled in the free plan when signing up for Takeout</h4>
@@ -207,11 +209,13 @@ export default function Home(props) {
                                 Get awesome benefits, <br /> for $3 a month.
                             </h2>
                             <ul className={styles.pricingList}>
-                                <li className={styles.pricingListLI}>✅ Send unlimited emails</li>
-                                <li className={styles.pricingListLI}>✅ Access to Takeout's API and packages</li>
-                                <li className={styles.pricingListLI}>✅ Setting a custom email</li>
-                                <li className={styles.pricingListLI}>✅ Early-access to new features</li>
-                                <li className={styles.pricingListLI}>✅ Priority Support</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Send unlimited emails</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Access to Takeout's API/packages</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> View recently sent emails</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Open/bounce detection</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Setting a custom email</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Early-access to new features</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Priority Support</li>
                             </ul>
                             {/* 
                             DO THE RANDOM HTML BULLSHIT

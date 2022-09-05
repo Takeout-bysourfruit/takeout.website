@@ -126,7 +126,7 @@
 .pricingCardSingle {
     border-radius: .575rem;
     width: 370px;
-    height: 520px;
+    height: 560px;
     background-color: var(--white);
     box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
 }
@@ -153,6 +153,22 @@
     font-weight: 400;
     color: var(--text-light);
 }
+
+
+.checkIcon {
+    color: var(--accent-color-success);
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.xIcon {
+    color: var(--accent-color-danger);
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 
 .tinyPrint {
     font-size: 15px;
