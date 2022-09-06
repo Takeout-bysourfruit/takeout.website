@@ -19,6 +19,7 @@ export default function TopBar() {
                 <li className={styles.menuOption}><a href="https://github.com/Takeout-bysourfruit/takeout.docs">Docs</a></li>
                 <li style={{display: `${isNone}`}} className={styles.menuOption}><a href={session ? "/dashboard" : ""}>{session && 'Dashboard' }</a></li>
                 <li className={styles.menuOption}><a href={session ? "/flow/sign-out" : "/flow/login"}>{session ? 'Sign out' : 'Login'}</a></li>
+                <li className={styles.menuOption}><a href="https://twitter.com/useTakeout"><Icon.TwitterLogo weight="fill" size={20} /></a></li>
             </ul>
             {/* 
                 black magic fuckery that's totally not stolen. css resides in globals.css
@@ -30,6 +31,7 @@ export default function TopBar() {
             <a href="https://github.com/Takeout-bysourfruit/takeout.docs">Docs</a>
             <a style={{display: `${isNone}`}} href="/dashboard">Dashboard</a>
             <a href={session ? "/flow/sign-out" : "/flow/login"}>{session ? 'Sign out' : 'Login'}</a>
+            <a href="https://twitter.com/useTakeout"><Icon.TwitterLogo weight="fill" size={20} /></a>
             </nav>
         </div>
     )

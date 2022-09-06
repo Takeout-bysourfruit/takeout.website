@@ -81,30 +81,30 @@
 /* the blue sections that are small */
 
 .miniHomeSection {
-    display: grid;
+    display: flex;
     background-color: var(--background-widget-gray);
     height: auto;
     min-height: 280px;
-    text-align: center !important;
+    text-align: center;
     align-items: center;
+    justify-content: center;
 }
 
 .miniSectionText {
     font-size: 50px;
     color: var(--text-sharp);
     font-weight: 700;
-    max-width: 600px;
-    margin: 0 auto;
+}
+
+.textCunt {
+    max-width: 600px !important;
 }
 
 .miniSectionMiniText {
     font-size: 20px;
     color: var(--text-light);
     font-weight: 400;
-    max-width: 600px;
-    margin: 0 auto;
 }
-
 
 
 

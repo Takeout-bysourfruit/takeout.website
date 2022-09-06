@@ -110,10 +110,10 @@ export default function Home(props) {
                             Use Takeout and send millions of transactional emails without fear of being charged extraordinary amounts.
                         </h2>
                         <div className={styles.buttonContainer}>
-                            <a href={href} className={styles.blueButton} style={{verticalAlign: 'middle'}}>{buttText} <Icon.CaretRight className={styles.buttIcon} style={{fontSize: '1.1rem'}} weight='bold' /> </a>
+                            <a href={href} className={styles.blueButton} style={{ verticalAlign: 'middle' }}>{buttText} <Icon.CaretRight className={styles.buttIcon} style={{ fontSize: '1.1rem' }} weight='bold' /> </a>
                             <div className={styles.buttonTextInside}>
                                 <b>Start building with Takeout for free.</b>
-                                <br/>
+                                <br />
                                 <span className={styles.skinnyText}>Questions? <a className={styles.supportLink} href="mailto:takeout@bysourfruit.com?subject=Question about Takeout">Contact our support team</a></span>
                             </div>
                         </div>
@@ -122,7 +122,7 @@ export default function Home(props) {
 
 
                 <section className={styles.miniHomeSection} style={{ marginBottom: '100px' }}>
-                    <h1 className={styles.miniSectionText}>
+                    <h1 className={styles.miniSectionText} style={{ maxWidth: '600px' }}>
                         Over <CountUp start={0} end={sent} duration={3.69} separator="," suffix=" emails" onEnd={() => console.log('Ended! 👏')} onStart={() => console.log('Started! 💨')} /> sent using Takeout
                     </h1>
                 </section>
@@ -137,13 +137,13 @@ export default function Home(props) {
                             With easy to use packages (JavaScript and Python, more coming soon) and a simple yet well-documented API allows developers to quickly send emails using any programming language and an internet connection.
                         </h2>
                         <div className={styles.buttonContainer}>
-                            <a href='https://takeout.js.org' className={styles.blueButton} style={{verticalAlign: 'middle'}}>Takeout.js <Icon.CaretRight className={styles.buttIcon} style={{fontSize: '1.1rem'}} weight='bold' /> </a>
-                            <a href='https://github.com/Takeout-bysourfruit/takeout.py' className={styles.blueButton} style={{verticalAlign: 'middle'}}>Takeout.py <Icon.CaretRight className={styles.buttIcon} style={{fontSize: '1.1rem'}} weight='bold' /> </a>
+                            <a href='https://takeout.js.org' className={styles.blueButton} style={{ verticalAlign: 'middle' }}>Takeout.js <Icon.CaretRight className={styles.buttIcon} style={{ fontSize: '1.1rem' }} weight='bold' /> </a>
+                            <a href='https://github.com/Takeout-bysourfruit/takeout.py' className={styles.blueButton} style={{ verticalAlign: 'middle' }}>Takeout.py <Icon.CaretRight className={styles.buttIcon} style={{ fontSize: '1.1rem' }} weight='bold' /> </a>
                         </div>
-                        <br/>
-                        <div className={styles.buttonTextInside2} style={{lineHeight: '25px'}}>
-                                <b>Can't find a package for your language?</b><br/>
-                                <span className={styles.skinnyText}>We encourage others to build API wrappers for Takeout, or you can <a className={styles.supportLink} href='https://github.com/Takeout-bysourfruit/takeout.docs#using-the-api-'>use the API yourself.</a></span>
+                        <br />
+                        <div className={styles.buttonTextInside2} style={{ lineHeight: '25px' }}>
+                            <b>Can't find a package for your language?</b><br />
+                            <span className={styles.skinnyText}>We encourage others to build API wrappers for Takeout, or you can <a className={styles.supportLink} href='https://github.com/Takeout-bysourfruit/takeout.docs#using-the-api-'>use the API yourself.</a></span>
                         </div>
                     </div>
 
@@ -154,12 +154,14 @@ export default function Home(props) {
 
 
                 <section className={styles.miniHomeSection} style={{ marginBottom: '100px' }}>
-                    <h1 className={styles.miniSectionText}>
-                        Amazing deliverability
-                    </h1>
-                    <h2 className={styles.miniSectionMiniText} style={{ marginTop: '-70px' }}>
-                        Takeout isn't meant to send promotional emails, and we're making sure those emails are sent through the same, but different infrastructure. This work allows your transactional emails to almost never make it into someone's spam folder.
-                    </h2>
+                    <div className={styles.textCunt}>
+                        <h1 className={styles.miniSectionText}>
+                            Amazing deliverability
+                        </h1>
+                        <h2 className={styles.miniSectionMiniText}>
+                            Takeout isn't meant to send promotional emails, and we're making sure those emails are sent through the same, but different infrastructure. This work allows your transactional emails to almost never make it into someone's spam folder.
+                        </h2>
+                    </div>
                 </section>
 
 
@@ -173,7 +175,7 @@ export default function Home(props) {
                             The most affordable way to <b>send emails to millions</b>
                         </h1>
                         <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
-                            Takeout's pricing structure is extremely simple, and provides amazing features for $3 a month. 
+                            Takeout's pricing structure is extremely simple, and provides amazing features for $3 a month.
                         </h2>
 
                     </div>
@@ -227,14 +229,65 @@ export default function Home(props) {
                     </div>
                 </section>
 
-                <section className={styles.miniHomeSection}>
-                    <h1 className={styles.miniSectionText} >
-                        We're currently in beta
-                    </h1>
-                    <h2 className={styles.miniSectionMiniText} style={{ marginTop: '-30px' }}>
-                        Takeout launched in August 2022, and certainly isn't perfect. We're trying to be, though 😉. We'll be adding more and more features over the next couple of months. Stay tuned!
-                    </h2>
+                {
+                // ONLY WHEN WE ACTUALLY GET 1000+ USERS!!!!!!!!!!!!!!
+                /*<section className={styles.miniHomeSection} style={{ marginBottom: '100px' }}>
+                    <div className={styles.textCunt}>
+                        <h1 className={styles.miniSectionText} >
+                            Dependable sending at scale
+                        </h1>
+                        <h2 className={styles.miniSectionMiniText}>
+                            Send 500 emails or 500 million with confidence, knowing Takeout has sent over {sent} emails since August 2022.
+                        </h2>
+                    </div>
+                </section>*/}
+
+                <section className={styles.miniHomeSection} style={{ marginBottom: '100px' }}>
+                    <div className={styles.textCunt}>
+                        <h1 className={styles.miniSectionText} >
+                            Built for developers
+                        </h1>
+                        <h2 className={styles.miniSectionMiniText}>
+                            We're not trying to appeal to giant enterprises with $10,000 tiers. We won't spam you to buy Takeout+, we won't lock cool features behind paywalls.
+                        </h2>
+                    </div>
                 </section>
+
+                <section className={styles.furtherSections} style={{ marginBottom: '100px' }}>
+                    <div className={styles.firstDivText}>
+                        <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
+                            The service that's <b>updated constantly.</b>
+                        </h1>
+                        <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
+                            Takeout gets updated almost every day, adding new features to the dashboard, API, and packages.
+                        </h2>
+                        <div className={styles.buttonContainer}>
+                            <a href='https://paypal.me/s0urfruit' className={styles.blueButton} style={{ verticalAlign: 'middle' }}>Donate <Icon.CaretRight className={styles.buttIcon} style={{ fontSize: '1.1rem' }} weight='bold' /> </a>
+                            <a href='https://github.com/Takeout-bysourfruit' className={styles.blueButton} style={{ verticalAlign: 'middle' }}>Contribute on GitHub <Icon.CaretRight className={styles.buttIcon} style={{ fontSize: '1.1rem' }} weight='bold' /> </a>
+                        </div>
+                        <br />
+                        <div className={styles.buttonTextInside2} style={{ lineHeight: '25px' }}>
+                            <b>Have a suggestion for a new feature?</b><br />
+                            <span className={styles.skinnyText}>We'd love it if you <a className={styles.supportLink} href='https://twitter.com/intent/tweet?text=.%40useTakeout+I+got+an+idea%21'>tweeted at us!</a></span>
+                        </div>
+                    </div>
+
+                    <div className={styles.secondDivImage}>
+                        <img src="options.png" className={styles.marketingImageHome} />
+                    </div>
+                </section>
+
+                <section className={styles.miniHomeSection}>
+                    <div className={styles.textCunt}>
+                        <h1 className={styles.miniSectionText} >
+                            We're currently in beta
+                        </h1>
+                        <h2 className={styles.miniSectionMiniText}>
+                            Takeout launched in August 2022, and certainly isn't perfect. We're trying to be, though 😉. We'll be adding more and more features over the next couple of months. Stay tuned!
+                        </h2>
+                    </div>
+                </section>
+
             </main>
             <Footer />
 

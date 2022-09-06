@@ -24,7 +24,7 @@ export default function Footer() {
                         <a className={styles.footerHref} href="/#pricing">{'<'} Discover our simple pricing</a>
                     </h2>
                     <h2 className={styles.descriptionWhite}>
-                        <a className={styles.footerHref} href="/faq">{'<'} Immerse yourself in the FAQ</a>
+                        <a className={styles.footerHref} href="https://twitter.com/useTakeout">{'<'} Immerse yourself in our Twitter</a>
                     </h2>
                     <h2 className={styles.descriptionWhite}>
                         <a className={styles.footerHref} href="https://github.com/Takeout-bysourfruit">{'<'} Doomscroll the GitHub</a>
@@ -43,7 +43,7 @@ export default function Footer() {
                         <a className={styles.footerHref} href="/#pricing">See our plans {'>'}</a>
                     </h2>
                     <h2 className={styles.descriptionWhite}>
-                        <a className={styles.footerHref} href="/faq"> the FAQ {'>'}</a>
+                        <a className={styles.footerHref} href="https://twitter.com/useTakeout"> Immerse yourself in our Twitter {'>'}</a>
                     </h2>
                     <h2 className={styles.descriptionWhite}>
                         <a className={styles.footerHref} href="https://github.com/Takeout-bysourfruit">Doomscroll the GitHub {'>'}</a>
