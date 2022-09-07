@@ -219,10 +219,7 @@ export default function Home(props) {
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Early-access to new features</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Priority Support</li>
                             </ul>
-                            {/* 
-                            DO THE RANDOM HTML BULLSHIT
-                            <PayPal id="thefuckingPayPal" />
-                            */}
+
                             {randomHTML}
 
                         </div>
@@ -268,7 +265,8 @@ export default function Home(props) {
                         <br />
                         <div className={styles.buttonTextInside2} style={{ lineHeight: '25px' }}>
                             <b>Have a suggestion for a new feature?</b><br />
-                            <span className={styles.skinnyText}>We'd love it if you <a className={styles.supportLink} href='https://twitter.com/intent/tweet?text=.%40useTakeout+I+got+an+idea%21'>tweeted at us!</a></span>
+                            {/*<span className={styles.skinnyText}>We'd love it if you <a className={styles.supportLink} href='https://twitter.com/intent/tweet?text=.%40useTakeout+I+got+an+idea%21'>tweeted at us!</a></span>*/}
+                            <span className={styles.skinnyText}>We'd love it if you <a className={styles.supportLink} href='https://twitter.com/useTakeout'>tweeted at us!</a></span>
                         </div>
                     </div>
 

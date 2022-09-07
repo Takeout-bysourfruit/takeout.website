@@ -5,30 +5,12 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Head from 'next/head'
 import React from "react"
-import styles from '../styles/Home.module.css'
-import TopBar from '../components/topbar'
-import { useEffect, useState } from 'react'
+import styles from '../styles/homie/Revamp.module.css'
+import TopBar from '../components/homie/topbar'
 import Footer from '../components/footer'
 import * as Icon from "phosphor-react";
 
 export default function NotFound() {
-    const [face, setFace] = useState('\\(o_o)/')
-    useEffect(() => {
-        const faceArr = [
-            '(;-;)',
-            '(^-^*)',
-            '\\(^Д^)/',
-            '(·_·)',
-            '\\(o_o)/',
-            '(=\'X\'=)',
-            '(≥o≤)',
-            '\\(^_^)/',
-            '(>_<)',
-        ];
-        const chosenface = faceArr[Math.floor(Math.random() * faceArr.length)];
-        setFace(chosenface)
-    }, [face])
-
     return (
         <div className={styles.container}>
             <Head>
@@ -60,23 +42,22 @@ export default function NotFound() {
 
             <main className={styles.main}>
                 <TopBar />
-                <section className={styles.intro}>
-                    <div className={styles.two}>
-                        <h1 style={{fontSize: '90px'}} className={styles.headingWhite}>{face}</h1><br/>
-                        <h2 className={styles.descriptionWhite}>We couldn't find the page you tried to reach.</h2>
-                        <a href="/" className={styles.whiteButton}>Take me out of here</a>
+                <section className={styles.firstHomeSection} style={{ marginBottom: '100px' }}>
+                    <div className={styles.firstDivImage}>
+                        <img src="404.png" width='300px' />
                     </div>
-                </section>
-                <section className={styles.widgetSection}>
-                    <div className={styles.thiccWidgetSales}>
-                        <h1 className={styles.headingBlue}>
-                            <Icon.Question weight="bold" className={styles.icon} />
-                            <br />
-                            Questions?
+
+                    <div className={styles.firstDivText}>
+                        <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
+                            We couldn't find what you're looking for.
                         </h1>
-                        <h2 className={styles.widgetDescriptionCut}>You can contact us at takeout@bysourfruit.com. Or, tweet at @s0urfruit. You can also go read our FAQ. <br/><br/><a className={styles.anchor} href="/faq">Read the FAQ {'>'}</a></h2>
+
+                        <div className={styles.buttonContainer}>
+                            <a href='/' className={styles.blueButton} style={{ verticalAlign: 'middle' }}>Take me home <Icon.CaretRight className={styles.buttIcon} style={{ fontSize: '1.1rem' }} weight='bold' /> </a>
+                        </div>
                     </div>
                 </section>
+
             </main>
             <Footer/>
         </div>

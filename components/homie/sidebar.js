@@ -12,7 +12,7 @@ export default function SideBar() {
         <div className={styles.sideBar}>
             <li className={styles.sideBarLink}>
                 <Icon.HouseSimple className={styles.icon} weight="bold" />
-                <a href="/dashboard/beta">Dashboard</a>
+                <a href="/dashboard">Dashboard</a>
             </li>
             <li className={styles.sideBarLink}>
                 <Icon.Wrench className={styles.icon} weight="bold" />

@@ -4,7 +4,7 @@
 
 .main {
     max-width: 1000px;
-
+    min-height: 60vh;
     margin: auto;
 }
 
@@ -14,7 +14,6 @@
 
 /* Template: class { text-align: XXX; flex: 3; } */
 
-
 /* SIDEBAR */
 /* SIDEBAR */
 /* SIDEBAR */
@@ -23,7 +22,6 @@
     padding: 10px;
     height: auto;
     flex: 1;
-
 }
 
 .sideBarLink {

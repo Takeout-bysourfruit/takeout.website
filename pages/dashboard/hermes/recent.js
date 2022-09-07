@@ -94,7 +94,7 @@ export default function Dashboard(props) {
                                 ))}
                         </div>
                     </section>
-                    <div style={{ height: '50vh', minHeight: '600px' }} />
+
                 </section>
             </main>
 

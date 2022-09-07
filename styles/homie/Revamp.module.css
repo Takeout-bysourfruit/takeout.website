@@ -1,3 +1,8 @@
+.main {
+    min-height: 70vh;
+    height: 100%;
+}
+
 .firstHomeSection, .furtherSections {
     display: flex;
     max-width: 900px;
@@ -209,7 +214,7 @@
 /* MISC */
 
 .footerContainer {
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
