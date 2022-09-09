@@ -44,12 +44,12 @@ export default function NotFound() {
                 <TopBar />
                 <section className={styles.firstHomeSection} style={{ marginBottom: '100px' }}>
                     <div className={styles.firstDivImage}>
-                        <img src="404.png" width='300px' />
+                        <img src="https://i.ibb.co/fCVC3CW/404.png" width='300px' />
                     </div>
 
                     <div className={styles.firstDivText}>
                         <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
-                            We couldn't find what you're looking for.
+                            We couldn't find what <b>you're looking for.</b>
                         </h1>
 
                         <div className={styles.buttonContainer}>

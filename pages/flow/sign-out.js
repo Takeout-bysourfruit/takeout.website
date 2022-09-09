@@ -19,12 +19,12 @@ export default function Home(props) {
     const { data: session, status } = useSession()
     const router = useRouter()
 
-    useSession({
+    /*useSession({
         required: true,
         onUnauthenticated() {
             router.push('/flow/login')
         },
-    })
+    })*/
 
 
     return (
@@ -48,25 +48,30 @@ export default function Home(props) {
                 <meta name="twitter:image" content="https://i.ibb.co/28RgWJs/takeout.png" />
                 <meta name="twitter:image:alt" content="Takeout" />
 
-                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
             </Head>
             <TopBar />
-            <main className={styles.main} style={{ marginTop: '30px', minHeight: '40vh'}}>
-                <section className={styles.loginSection} style={{ marginBottom: '100px' }}>
-                    <h1 className={styles.hookText} style={{ marginBottom: '30px' }}>
-                        Sign out of Takeout
-                    </h1>
-                    <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
-                        You can log back in <a href="/flow/login" className={styles.anchor}>here</a>. See you soon!
-                    </h2>
-                    <a onClick={() => signOut({ callbackUrl: 'https://takeout.bysourfruit.com/' })} className={styles.blueButton}>Sign out</a>
+            <div className={styles.sections}>
+                <section className={styles.loginSecLeft}>
+                    <img height="200px" src="../bye.png" />
                 </section>
-            </main>
+                <section className={styles.loginSecRight}>
+                    <div className={styles.loginRightText}>
+                        <h1 className={styles.hookText} style={{ marginBottom: '30px' }}>
+                            Sign out
+                        </h1>
+                        <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
+                            You can log back in <a href="/flow/login" className={styles.anchor}>here</a>. <br/> See you soon!
+                        </h2>
+                        <a onClick={() => signOut({ callbackUrl: 'https://takeout.bysourfruit.com/' })} className={styles.blueButton}>Sign out</a>
+                    </div>
+                </section>
+            </div>
             <Footer />
         </div>
     )

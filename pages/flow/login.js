@@ -25,7 +25,7 @@ export default function Home(props) {
 
 
     return (
-        <div className={styles.container}>
+        <div className={styles.containerLogin}>
             <Head>
                 <title>Login | Takeout</title>
                 <meta name="viewport" content="width=device-width, initial-scale=0.7" />
@@ -45,13 +45,36 @@ export default function Home(props) {
                 <meta name="twitter:image" content="https://i.ibb.co/28RgWJs/takeout.png" />
                 <meta name="twitter:image:alt" content="Takeout" />
 
-                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="theme-color" content="#ffffff" />
             </Head>
+            <TopBar />
+            <div className={styles.sections}>
+                <section className={styles.loginSecLeft}>
+                    <img height="200px" src="../hi.png" />
+                </section>
+                <section className={styles.loginSecRight}>
+                    <div className={styles.loginRightText}>
+                        <h1 className={styles.hookText} style={{ marginBottom: '30px' }}>
+                            Login
+                        </h1>
+                        <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
+                            Welcome back! You can login via GitHub using the button below.
+                        </h2>
+                        <a onClick={() => { signIn('github', { callbackUrl: '/flow/login' })}} className={styles.blueButton}>Login with GitHub</a>
+                    </div>
+                </section>
+            </div>
+            <Footer />
+        </div>
+    )
+}
+
+/*
             <TopBar />
             <main className={styles.main} style={{ marginTop: '30px', minHeight: '40vh'}}>
                 <section className={styles.loginSection} style={{ marginBottom: '100px' }}>
@@ -66,6 +89,4 @@ export default function Home(props) {
 
             </main>
             <Footer />
-        </div>
-    )
-}
+*/

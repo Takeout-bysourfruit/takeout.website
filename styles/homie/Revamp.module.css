@@ -1,6 +1,5 @@
 .main {
-    min-height: 70vh;
-    height: 100%;
+    min-height: 80vh;
 }
 
 .firstHomeSection, .furtherSections {
@@ -44,6 +43,7 @@
 .marketingImageHome {
     width: 300px;
 }
+
 
 .hookText {
     font-size: 50px;
@@ -395,4 +395,26 @@
 .anchor:hover {
     opacity: 0.7;
     transition: opacity 0.5s;
+}
+
+.containerLogin {height: 100%}
+
+.sections, .loginSecLeft, .loginSecRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.loginSecLeft, .loginSecRight {
+    width: 450px;
+    height: 100%;
+    min-height: 600px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .loginSecLeft {
+        display: none;
+    }
 }

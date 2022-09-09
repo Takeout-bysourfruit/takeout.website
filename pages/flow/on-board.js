@@ -54,23 +54,27 @@ export default function Home(props) {
                 <meta name="theme-color" content="#ffffff" />
             </Head>
             <TopBar />
-            <main className={styles.main} style={{ marginTop: '30px', minHeight: '40vh'}}>
-                <section className={styles.loginSection} style={{ marginBottom: '100px' }}>
-                    <h1 className={styles.hookText} style={{ marginBottom: '30px' }}>
-                        Sign up for Takeout
-                    </h1>
-                    <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
-                        Join hundreds of other developers sending emails using Takeout.
-                    </h2>
-                    <a onClick={() => { signIn('github', { callbackUrl: '/flow/on-board' })}} className={styles.blueButton}>Sign up with GitHub</a><br/>
-                    <h4 style={{fontSize: '16px'}} className={styles.tinyPrint}>
-                        or<br/>
-                        <div style={{marginTop: '10px'}}><a style={{fontSize: '16px', marginTop: '30px'}} className={styles.anchor} href="/flow/login">Already have an account?</a></div>
-                    </h4>
-                    <h4 className={styles.tinyPrint}>By signing up for Takeout, you agree to our <a className={styles.anchor} href='/terms'>Terms</a>, <a className={styles.anchor} href='/privacy'>Privacy Policy</a>, and to receive transactional emails from Takeout.</h4>
+            <div className={styles.sections}>
+                <section className={styles.loginSecLeft}>
+                    <img height="200px" src="../hi.png" />
                 </section>
-
-            </main>
+                <section className={styles.loginSecRight}>
+                    <div className={styles.loginRightText}>
+                        <h1 className={styles.hookText} style={{ marginBottom: '30px' }}>
+                            Sign up
+                        </h1>
+                        <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
+                            Join hundreds of other developers sending emails using Takeout.
+                        </h2>
+                        <a onClick={() => { signIn('github', { callbackUrl: '/flow/on-board' })}} className={styles.blueButton}>Sign up with GitHub</a><br/>
+                        <h4 style={{fontSize: '16px'}} className={styles.tinyPrint}>
+                            or<br/>
+                            <div style={{marginTop: '10px'}}><a style={{fontSize: '16px', marginTop: '30px'}} className={styles.anchor} href="/flow/login">Already have an account?</a></div>
+                        </h4>
+                        <h4 className={styles.tinyPrint}>By signing up for Takeout, you agree to our <a className={styles.anchor} href='/terms'>Terms</a>, <a className={styles.anchor} href='/privacy'>Privacy Policy</a>, and to receive transactional emails from Takeout.</h4>
+                    </div>
+                </section>
+            </div>
             <Footer />
         </div>
     )
