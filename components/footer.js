@@ -37,10 +37,10 @@ export default function Footer() {
                 <div className={styles.footerSideSecret}>
                 <h1 style={{fontSize: '30px'}} className={styles.headingWhite}>Takeout</h1>
                     <h2 className={styles.descriptionWhite}>
-                        <a className={styles.footerHref} href="/">Go Home {'>'}</a>
+                        <a className={styles.footerHref} href="/">Explore the home page {'>'}</a>
                     </h2>
                     <h2 className={styles.descriptionWhite}>
-                        <a className={styles.footerHref} href="/#pricing">See our plans {'>'}</a>
+                        <a className={styles.footerHref} href="/#pricing">Discover our simple pricing {'>'}</a>
                     </h2>
                     <h2 className={styles.descriptionWhite}>
                         <a className={styles.footerHref} href="https://twitter.com/useTakeout"> Immerse yourself in our Twitter {'>'}</a>
@@ -49,7 +49,7 @@ export default function Footer() {
                         <a className={styles.footerHref} href="https://github.com/Takeout-bysourfruit">Doomscroll the GitHub {'>'}</a>
                     </h2>
                     <h2 className={styles.descriptionWhite}>
-                        <a className={styles.footerHref} href={session ? "/flow/sign-out" : "/flow/login"}>{session ? 'Sign out >' : 'Login >'}</a>
+                        <a className={styles.footerHref} href={session ? "/flow/sign-out" : "/flow/login"}>{session ? 'Sign out of Takeout >' : 'Login to Takeout >'}</a>
                     </h2>
                 </div>
 
