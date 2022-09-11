@@ -13,6 +13,7 @@
         "axios": "^0.27.2",
         "deta": "^1.1.0",
         "dotenv": "^16.0.2",
+        "email-deep-validator": "^3.3.0",
         "email-smtp-verificator": "^1.0.0",
         "emailjs": "^4.0.1",
         "express-rate-limit": "^6.6.0",

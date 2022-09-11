@@ -18,7 +18,10 @@ export default function SideBar() {
                 <Icon.Wrench className={styles.icon} weight="bold" />
                 <a href="/dashboard/hermes/configure">Configure</a>
             </li>
-
+            <li className={styles.sideBarLink}>
+                <Icon.BellRinging className={styles.icon} weight="bold" />
+                <a href="/dashboard/hermes/webhooks">Webhooks</a>
+            </li>
             <li className={styles.sideBarLink}>
                 <Icon.Envelope className={styles.icon} weight="bold" />
                 <a href="/dashboard/hermes/recent">Recent emails</a>

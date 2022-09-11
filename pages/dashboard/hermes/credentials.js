@@ -7,7 +7,7 @@ import Head from 'next/head'
 import React from "react"
 
 import styles from '../../../styles/homie/db.module.css'
-
+import * as Icon from "phosphor-react";
 import Loader from '../../../components/loader'
 import TopBar from '../../../components/homie/topbar'
 import DashTop from '../../../components/homie/dashtop'
@@ -20,6 +20,10 @@ import { useState, useEffect } from 'react'
 export default function Dashboard(props) {
     const [loading, setLoading] = useState(true);
     const [userToken, setToken] = useState('')
+    const [seeCreds, setCredVis] = useState(false);
+    function toggleVis() {
+        setCredVis(!seeCreds);
+    }
 
     useEffect(() => {
         const { name, email, token, plan } = props.userData
@@ -73,7 +77,10 @@ export default function Dashboard(props) {
                         <h1 style={{textAlign: 'center'}} className={styles.dashboardYouSent}>Your credentials</h1>
                         <div className={styles.credentials}>
                             <h2 className={styles.credText}>
-                                <b>Your token:</b> {userToken}
+
+                                <a className={styles.showHideCred} onClick={toggleVis}>{seeCreds ? <Icon.EyeSlash weight='bold' className={styles.showHideIcon} /> : <Icon.Eye weight='bold' className={styles.showHideIcon} />}</a>
+                                <span>{seeCreds ? userToken : '* * * * * * * * * * * * * * * * * * * * *'}</span>
+
                                 <br /><br />
                                 Use this to send emails using Takeout.js, Takeout.py, or via a POST request.
                                 If your token leaks, contact us immediately and we'll try to assist you.
