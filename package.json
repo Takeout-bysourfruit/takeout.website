@@ -16,11 +16,11 @@
         "email-smtp-verificator": "^1.0.0",
         "emailjs": "^4.0.1",
         "express-rate-limit": "^6.6.0",
-        "express-slow-down": "^1.4.0",
+        "express-slow-down": "^1.4.1",
         "fs": "^0.0.1-security",
         "isomorphic-dompurify": "^0.22.0",
         "lodash": "^4.17.21",
-        "next": "12.2.5",
+        "next": "12.3.0",
         "next-auth": "^4.10.3",
         "nextjs-cors": "^2.1.1",
         "phosphor-react": "^1.4.1",
@@ -33,10 +33,10 @@
         "react-switch": "^7.0.0",
         "regexcensor": "^1.0.4",
         "round": "^2.0.1",
-        "takeout.js": "^1.2.1"
+        "takeout.js": "^1.2.2"
     },
     "devDependencies": {
         "eslint": "8.23.0",
-        "eslint-config-next": "12.2.5"
+        "eslint-config-next": "12.3.0"
     }
 }

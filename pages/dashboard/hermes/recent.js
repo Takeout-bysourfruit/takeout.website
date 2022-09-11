@@ -29,7 +29,6 @@ export default function Dashboard(props) {
         setLoading(false)
     }, [props])
 
-
     return (
         <div className={styles.container}>
             <Head>
@@ -85,9 +84,10 @@ export default function Dashboard(props) {
                                 </h2>
                             ) :
                                 emails.map((email) => (
-                                    <div className={styles.recentEmail} key={email.token} style={{ marginBottom: '10px' }}>
+                                    <div key={email.key} className={styles.recentEmail} style={{ marginBottom: '10px' }}>
                                         <b>To:</b>&nbsp;{email.exchange.to}<br />
                                         <b>Subject:</b>&nbsp;{email.subject}<br />
+                                        <b>Opened:&nbsp;</b>{email.bodies.text ? <span>Not Tracked</span> : <span>{email.track.wasOpened ? 'Yes' : 'No/Unknown'}</span>}<br />
                                         <b>{email.bodies.text ? 'Text' : 'HTML'}:</b>&nbsp;{email.bodies.text ? email.bodies.text.substring(0, 51) + ' ...' : <span style={{ color: 'rgb(23,63,156)', fontWeight: 'bold' }}><a href={`/preview/${email.key}`} target="_blank">View HTML email in new tab</a></span>}
                                     </div>
 
