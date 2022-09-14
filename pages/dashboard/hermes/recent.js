@@ -88,7 +88,7 @@ export default function Dashboard(props) {
                                         <b>To:</b>&nbsp;{email.exchange.to}<br />
                                         <b>Subject:</b>&nbsp;{email.subject}<br />
                                         <b>Opened:&nbsp;</b>{email.bodies.text ? <span>Not Tracked</span> : <span>{email.track.wasOpened ? 'Yes' : 'No/Unknown'}</span>}<br />
-                                        <b>{email.bodies.text ? 'Text' : 'HTML'}:</b>&nbsp;{email.bodies.text ? email.bodies.text.substring(0, 51) + ' ...' : <span style={{ color: 'rgb(23,63,156)', fontWeight: 'bold' }}><a href={`/preview/${email.key}`} target="_blank">View HTML email in new tab</a></span>}
+                                        <b>{email.bodies.text ? 'Text' : 'HTML'}:</b>&nbsp;{email.bodies.text ? email.bodies.text.substring(0, 48) + ' ...' : <span style={{ color: 'rgb(23,63,156)', fontWeight: 'bold' }}><a href={`/preview/${email.key}`} target="_blank">View HTML email in new tab</a></span>}
                                     </div>
 
                                 ))}

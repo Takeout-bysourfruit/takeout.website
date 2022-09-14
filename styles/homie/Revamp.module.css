@@ -2,6 +2,7 @@
     min-height: 80vh;
 }
 
+
 .firstHomeSection, .furtherSections {
     display: flex;
     max-width: 900px;
@@ -11,6 +12,11 @@
 
     justify-content: center !important;
     flex-wrap: wrap;
+
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
 }
 
 .firstDivText {
@@ -110,7 +116,6 @@
     color: var(--text-light);
     font-weight: 400;
 }
-
 
 
 /* Pricing */

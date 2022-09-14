@@ -41,9 +41,26 @@ export default function Home(props) {
 
 
     useEffect(() => {
-        console.log('Running fetch bitchy')
+        const hiddenElements = document.querySelectorAll('#sectionContent')
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show')
+                }
+            })
+        })
+
+        hiddenElements.forEach((el) => observer.observe(el))
+
+    }, [props])
+
+
+
+
+    useEffect(() => {
         if (status === "authenticated") {
-            console.log('Authenticated, checking plan status')
             axios.get(`/api/get/status?email=${session.user.email}`)
                 .then(function (response) {
                     const planData = response.data.plan
@@ -97,7 +114,7 @@ export default function Home(props) {
             </Head>
             <TopBar />
             <main className={styles.main} style={{ marginTop: '30px' }}>
-                <section className={styles.firstHomeSection} style={{ marginBottom: '100px' }}>
+                <section className={styles.firstHomeSection} style={{ marginBottom: '100px' }} id="sectionContent">
                     <div className={styles.firstDivImage}>
                         <img src="sentsucc.png" width='300px' />
                     </div>
@@ -128,10 +145,10 @@ export default function Home(props) {
                 </section>
 
 
-                <section className={styles.furtherSections} style={{ marginBottom: '100px' }}>
+                <section className={styles.furtherSections} style={{ marginBottom: '100px' }} id="sectionContent">
                     <div className={styles.firstDivText}>
                         <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
-                            Set Takeout up <b>in minutes</b>
+                            Set up Takeout <b>in minutes</b>
                         </h1>
                         <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
                             With easy to use packages (JavaScript and Python, more coming soon) and a simple yet well-documented API allows developers to quickly send emails using any programming language and an internet connection.
@@ -148,7 +165,7 @@ export default function Home(props) {
                     </div>
 
                     <div className={styles.secondDivImage}>
-                        <img src="code/odp.png" className={styles.marketingImageHome} />
+                        <img src="code/code2.gif" className={styles.marketingImageHome} />
                     </div>
                 </section>
 
@@ -165,7 +182,7 @@ export default function Home(props) {
                 </section>
 
 
-                <section className={styles.furtherSections} style={{ marginBottom: '50px' }}>
+                <section className={styles.furtherSections} style={{ marginBottom: '50px' }} id="sectionContent">
                     <div className={styles.firstDivImage}>
                         <img src="pig.png" width='300px' />
                     </div>
@@ -183,7 +200,7 @@ export default function Home(props) {
 
                 <section className={styles.pricingHome} style={{ marginBottom: '100px' }} id="pricing">
                     <div className={styles.pricingCards}>
-                        <div className={styles.pricingCardSingle}>
+                        <div className={styles.pricingCardSingle} id="sectionContent">
                             <h1 className={styles.pricingCardTier}>
                                 Free
                             </h1>
@@ -194,7 +211,7 @@ export default function Home(props) {
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Send up to 500 emails per month</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Access to Takeout's API/packages</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> View recently sent emails</li>
-                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Open/bounce detection</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Webooks</li>
                                 <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Setting a custom email</span></li>
                                 <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Early-access to new features</span></li>
                                 <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Priority Support</span></li>
@@ -203,7 +220,7 @@ export default function Home(props) {
                             <h4 className={styles.tinyPrint}>You're automatically enrolled in the free plan when signing up for Takeout</h4>
                         </div>
 
-                        <div className={styles.pricingCardSingle} >
+                        <div className={styles.pricingCardSingle} id="sectionContent">
                             <h1 className={styles.pricingCardTier}>
                                 Takeout+
                             </h1>
@@ -214,7 +231,7 @@ export default function Home(props) {
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Send unlimited emails</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Access to Takeout's API/packages</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> View recently sent emails</li>
-                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Open/bounce detection</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Webooks</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Setting a custom email</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Early-access to new features</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Priority Support</li>
@@ -250,7 +267,7 @@ export default function Home(props) {
                     </div>
                 </section>
 
-                <section className={styles.furtherSections} style={{ marginBottom: '100px' }}>
+                <section className={styles.furtherSections} style={{ marginBottom: '100px' }} id="sectionContent">
                     <div className={styles.firstDivText}>
                         <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
                             The service that's <b>updated constantly.</b>
@@ -271,7 +288,7 @@ export default function Home(props) {
                     </div>
 
                     <div className={styles.secondDivImage}>
-                        <img src="options.png" className={styles.marketingImageHome} />
+                        <img src="options.png" width='300px' />
                     </div>
                 </section>
 

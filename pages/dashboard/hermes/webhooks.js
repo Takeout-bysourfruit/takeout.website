@@ -83,7 +83,7 @@ export default function Dashboard(props) {
             if (isValidURL(webURL)) {
                 console.log(isValidURL(webURL))
                 setPageTwo(true)
-                createWebhook()
+                await createWebhook()
             } else {
                 setError('Enter a valid URL')
             }
@@ -114,6 +114,7 @@ export default function Dashboard(props) {
 
     async function sendTest() {
         setButtTextVerify('Sent successfully')
+
         axios.post('https://verify-takeout.bysourfruit.com/verify/test', {
             token: userToken
         })
@@ -176,9 +177,24 @@ export default function Dashboard(props) {
                         <div className={styles.configureOption}>
                             <div className={styles.configureOptionText} style={{ marginBottom: '20px' }}>
                                 <h2 className={styles.configureOptionHeading}>Add an endpoint</h2>
-                                <h3 className={styles.configureOptionDesc}>Takeout will send a POST request with JSON to a URL you specify. It'll include details like whether or not the email will bounce, and the email address Takeout tried delivering to. Even if Takeout detects that an email may not deliver, it'll try sending it anyways.</h3>
+                                <h3 className={styles.configureOptionDesc}>
+                                    Takeout will send a POST request with JSON to a URL you specify.
+                                    It'll include details like whether or not the email will *bounce, 
+                                    and the email address Takeout tried delivering to. 
+                                    Even if Takeout detects that an email may not deliver, 
+                                    it'll try sending it anyways.
+                                    <br/><br/>
+                                    Takeout sends notifications for the following: 
+                                    <ul>
+                                        <li>- Email successfully sent</li>
+                                        <li>- Email may bounce</li>
+                                        <li>- Email opened (coming soon)</li>
+                                    </ul>
+                                    <br/>
+                                    *Currently, Takeout doesn't check if an email <i>actually</i> bounces, it only does certain checks (email is correctly formed, domain has MX records, etc) and will send an event notification stating the email bounced if a check fails. <b>The only way to reliably verify that a supplied email is a working/valid email is to send an email with a verification link</b>.
+                                </h3>
                                 <span className={styles.error} id="error"></span>
-                                {takeout ? <div><a id="configure" onClick={openModal} className={styles.blueButton} style={{marginRight: '10px'}}>Configure</a><a onClick={deleteWebhook} style={{ background: 'var(--accent-color-danger' }} className={styles.blueButton}>Reset</a></div> : <div><a href="/#pricing" className={styles.blueButton}>Access this and loads of other features</a></div>}
+                                <a id="configure" onClick={openModal} className={styles.blueButton} style={{marginRight: '10px'}}>Configure</a><a onClick={deleteWebhook} style={{ background: 'var(--accent-color-danger' }} className={styles.blueButton}>Reset</a>
                             </div>
 
                             <Modal

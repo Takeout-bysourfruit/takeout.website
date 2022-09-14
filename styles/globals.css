@@ -324,6 +324,11 @@ input[id*=toggle]:checked~nav a:nth-of-type(9) {
     }
 }
 
+.show {
+    filter: blur(0) !important;
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+}
 
 
 
