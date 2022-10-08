@@ -6,7 +6,12 @@
 import Head from 'next/head'
 import React from "react"
 import styles from '../../../styles/homie/db.module.css'
+
 import Lstyles from '../../../styles/loader.module.css'
+
+import WidgetLoading from '../../../components/loaders/widget'
+
+
 import TopBar from '../../../components/homie/topbar'
 import DashTop from '../../../components/homie/dashtop'
 import SideBar from '../../../components/homie/sidebar'
@@ -24,8 +29,11 @@ export default function Dashboard(props) {
         const { name, email, token, plan } = props.userData
         setToken(token)
         setEmails(props.emailData.items)
-        setLoading(true)
+        setTimeout(() => { setLoading(false) }, 1000)
     }, [props])
+
+
+    
 
     return (
         <div className={styles.container}>
@@ -78,13 +86,10 @@ export default function Dashboard(props) {
                                             <b>Opened:&nbsp;</b>{email.bodies.text ? <span>Not Tracked</span> : <span>{email.track.wasOpened ? 'Yes' : 'No/Unknown'}</span>}<br />
                                             <b>{email.bodies.text ? 'Text' : 'HTML'}:</b>&nbsp;{email.bodies.text ? email.bodies.text.substring(0, 48) + ' ...' : <span style={{ color: 'rgb(23,63,156)', fontWeight: 'bold' }}><a href={`/preview/${email.key}`} target="_blank">View HTML email in new tab</a></span>}
                                         </div>
-
                                     ))}
                             </div>
                         ) : (
-                            <div className={Lstyles.spinnerContainer}>
-                                <div className={Lstyles.loadingSpinner}></div>
-                            </div>
+                            <WidgetLoading/>
                         )}
                     </section>
 

@@ -344,6 +344,11 @@ input[id*=toggle]:checked~nav a:nth-of-type(9) {
 }
 
 
+.raise {
+    color: green !important;
+    transform: translateY(-10px) !important;
+    transition: transform 1s;
+}
 
 /* PrismJS 1.29.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+bash+python */

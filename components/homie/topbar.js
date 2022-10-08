@@ -12,7 +12,7 @@ export default function TopBar() {
     return (
         <div className={styles.topbar}>
             <h1 className={styles.logo}>
-                <a href="/"><img height="50px" src="https://i.ibb.co/nD4MxFg/Takeout-text-logo-2.png" /></a>
+                <a href="/"><img alt="logo" height="50px" src="https://i.ibb.co/nD4MxFg/Takeout-text-logo-2.png" /></a>
             </h1>
             <ul className={styles.menuOptions}>
                 <li className={styles.menuOption}><a href="#pricing">Pricing</a></li>

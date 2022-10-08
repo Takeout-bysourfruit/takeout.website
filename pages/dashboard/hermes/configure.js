@@ -213,8 +213,8 @@ export default function Dashboard(props) {
                         <h1 style={{textAlign: 'center'}} className={styles.dashboardYouSent}>Configure Takeout</h1>
                         <div className={styles.configureOption}>
                         <div className={styles.configureOptionText} style={{ marginBottom: '20px' }}>
-                            <h2 className={styles.configureOptionHeading}>Configure a custom email</h2>
-                            <h3 className={styles.configureOptionDesc}>If you don't want to use takeout@bysourfruit.com, set a custom email to send emails from.</h3>
+                            <h2 className={styles.configureOptionHeading}>Custom email</h2>
+                            <h3 className={styles.configureOptionDesc}>If you don't want to use takeout@bysourfruit.com, set a custom email to send emails from. Do note, Takeout will not host this email.</h3>
                             <span className={styles.error} id="error"></span>
                             {takeout ? <div><a id="configure" onClick={openModal} className={styles.blueButton} style={{marginRight: '10px'}}>Configure</a><a onClick={resetEmail} style={{ background: 'var(--accent-color-danger' }} className={styles.blueButton}>Reset</a></div> : <div><a href="/#pricing" className={styles.blueButton}>Access this and loads of other features</a></div>}
                             <div style={{ marginBottom: '70px' }} />

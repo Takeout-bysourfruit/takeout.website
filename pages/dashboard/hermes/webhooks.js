@@ -188,7 +188,7 @@ export default function Dashboard(props) {
                                     <ul>
                                         <li>- Email successfully sent</li>
                                         <li>- Email may bounce</li>
-                                        <li>- Email opened (coming soon)</li>
+                                        <li>- Email opened</li>
                                     </ul>
                                     <br/>
                                     *Currently, Takeout doesn't check if an email <i>actually</i> bounces, it only does certain checks (email is correctly formed, domain has MX records, etc) and will send an event notification stating the email bounced if a check fails. <b>The only way to reliably verify that a supplied email is a working/valid email is to send an email with a verification link</b>.

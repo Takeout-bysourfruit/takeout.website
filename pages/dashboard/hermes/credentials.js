@@ -26,7 +26,6 @@ export default function Dashboard(props) {
         setCredVis(!seeCreds);
     }
     
-
     useEffect(() => {
         const { name, email, token, plan } = props.userData
         setToken(token)
@@ -79,7 +78,7 @@ export default function Dashboard(props) {
                         <div className={styles.credentials}>
                             <h2 className={styles.credText}>
 
-                                <a className={styles.showHideCred} onClick={() => {navigator.clipboard.writeText(userToken)}}><Icon.Clipboard weight='bold' className={styles.showHideIcon} /></a>
+                                <a className={styles.showHideCred} onClick={() => {navigator.clipboard.writeText(userToken); setTimeout(() => { document.getElementById('clipIcon').classList.add("raise")}); setTimeout(() => { document.getElementById('clipIcon').classList.remove("raise")}, 1000)}}><Icon.Clipboard weight='bold' className={styles.showHideIcon} id='clipIcon' /></a>
                                 <a className={styles.showHideCred} onClick={toggleVis}>{seeCreds ? <Icon.EyeSlash weight='bold' className={styles.showHideIcon} /> : <Icon.Eye weight='bold' className={styles.showHideIcon} />}</a>
                                 <span>{seeCreds ? userToken : '* * * * * * * * * * * * * * * * * * * * *'}</span>
 
