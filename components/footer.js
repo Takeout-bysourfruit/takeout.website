@@ -3,8 +3,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
-import Head from 'next/head'
-import * as Icon from "phosphor-react";
 import React from "react"
 import styles from '../styles/Home.module.css'
 import { signIn, useSession } from "next-auth/react"

@@ -8,6 +8,7 @@ import Head from 'next/head'
 import React from "react"
 import styles from '../../styles/homie/db.module.css'
 import Loader from '../../components/loader'
+import Lstyles from '../../styles/loader.module.css'
 import TopBar from '../../components/homie/topbar'
 import DashTop from '../../components/homie/dashtop'
 import SideBar from '../../components/homie/sidebar'
@@ -29,7 +30,7 @@ export default function Dashboard(props) {
         const { dateStarted, emails_sent } = props.userData.usageInfo
         const { name, email, token, plan } = props.userData
         createDescription(name, plan, emails_sent, dateStarted)
-        setTimeout(() => { setLoading(false) }, 1000)
+        // setTimeout(() => { setLoading(false) }, 1000)
     }, [props])
 
 
@@ -84,7 +85,7 @@ export default function Dashboard(props) {
         'https://takeout.bysourfruit.com/api/email/send' \\
         --header 'Accept: */*' \\
         --header 'Content-Type: application/x-www-form-urlencoded' \\
-        --data-urlencode 'token=TOKEN' \\
+        --header 'Authorization: Token YOUR_TOKEN' \\
         --data-urlencode 'sender=Takeout.cURL' \\
         --data-urlencode 'receiver=test@example.com' \\
         --data-urlencode 'subject=I just sent an email using Takeout!' \\
@@ -95,9 +96,9 @@ export default function Dashboard(props) {
         const js = document.getElementById('js')
         const py = document.getElementById('py')
         const sh = document.getElementById('bash')
-        if (id === 'js') {js.style.display = 'block' ;py.style.display = 'none'; sh.style.display = 'none';}
-        if (id === 'py') {py.style.display = 'block'; js.style.display = 'none'; sh.style.display = 'none';}
-        if (id === 'bash') {sh.style.display = 'block'; py.style.display = 'none'; js.style.display = 'none';}
+        if (id === 'js') {js.style.display = 'block'; py.style.display = 'none'; sh.style.display = 'none'}
+        if (id === 'py') {py.style.display = 'block'; js.style.display = 'none'; sh.style.display = 'none'}
+        if (id === 'bash') {sh.style.display = 'block'; py.style.display = 'none'; js.style.display = 'none'}
     }
 
     return (
@@ -131,25 +132,26 @@ export default function Dashboard(props) {
                 <link href="/prisma/prism.css" rel="stylesheet" />
             </Head>
 
-            {!loading ? (
-                <span style={{ display: "none" }}>hiiii</span>
-            ) : (
-                <Loader />
-            )}
-
-            <TopBar />
+            <DashTop />
+            {/* Serves as the mobile dashboard menu too ^^' */}
             <main className={styles.main}>
                 <section className={styles.dashboardfuck}>
-                    <SideBar />
+                    <SideBar/>
                     <section className={styles.dashboardIndexJS}>
-                        <DashTop />
                         <div style={{ backgroundColor: 'var(--white)' }} className={styles.dashboardWidgetMed}>
-                            <div className={styles.textBlockMed}>
-                                <h1 style={{ color: 'var(--navy)' }} className={styles.smallHeadText}>{sent}</h1>
-                                <h2 style={{ color: 'var(--text-sharp)' }} className={styles.smallDescText}>{desc}</h2>
-                                <br />
-                                <a href={lolHREF} className={styles.blueButton}>{snarkyButton}</a>
-                            </div>
+                                {!loading ? (
+                                        <div className={styles.textBlockMed}>
+                                        <h1 style={{ color: 'var(--navy)' }} className={styles.smallHeadText}>{sent}</h1>
+                                        <h2 style={{ color: 'var(--text-sharp)' }} className={styles.smallDescText}>{desc}</h2>
+                                        <br />
+                                        <a href={lolHREF} className={styles.blueButton}>{snarkyButton}</a>
+                                    </div>
+                                ) : (
+                                    <div className={Lstyles.spinnerContainer}>
+                                        <div className={Lstyles.loadingSpinner}></div>
+                                         <h3 className={styles.loadingText}>Catching planes....</h3>
+                                    </div>
+                                )}
                         </div>
 
                         <div className={styles.dashboardWidgetLarge}>

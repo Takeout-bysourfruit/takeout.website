@@ -107,6 +107,11 @@
         grid-column: 1/2;
         width: 400px !important;
     }
+
+    .languageOptions {
+        grid-template-columns: 150px 100px 100px !important;
+    }
+    
 }
 
 .dashboardIndexJS {
@@ -145,21 +150,29 @@
 }
 
 
+.languageOptions {
+    background-color: var(--navy);
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    margin-bottom: -10px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .langOption {
     font-weight: 500;
     font-size: 1.2rem;
-    color: var(--text-sharp);
-
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
-    width: 180px;
-
+    color: var(--text-white);
     display: inline-block;
+}
 
-    background-color: var(--white);
-    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
-    margin-bottom: 20px;
+.langOptionCurrent {
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;
 }
 
 .smallHeadText {
@@ -175,8 +188,6 @@
     padding: 10px;
     margin-top: -45px;
 }
-
-
 
 
 .dashboardYouSent {
@@ -343,7 +354,7 @@
 .credentials {
     border-radius: .575rem;
     margin: auto;
-    width: 400px;
+    width: 430px;
     height: 250px;
     padding: 20px;
     background-color: var(--white);
@@ -366,4 +377,18 @@
     padding-right: 10px;
     font-size: 20px;
     vertical-align: top;
+}
+
+.copyButt {
+    margin-left: 10px;
+    background-color: var(--navy);
+    color: var(--text-white);
+    box-shadow: 0 10px 20px -10px var(--shadow-navy);
+    
+    border-radius: .375rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    /* I need to figure this out */
+    font-size: 15px;
 }

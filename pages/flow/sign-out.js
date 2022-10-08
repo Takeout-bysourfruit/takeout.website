@@ -19,13 +19,12 @@ export default function Home(props) {
     const { data: session, status } = useSession()
     const router = useRouter()
 
-    /*useSession({
+    useSession({
         required: true,
         onUnauthenticated() {
             router.push('/flow/login')
         },
-    })*/
-
+    })
 
     return (
         <div className={styles.container}>

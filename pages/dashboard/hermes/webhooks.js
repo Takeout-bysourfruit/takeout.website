@@ -167,12 +167,12 @@ export default function Dashboard(props) {
                 <Loader />
             )}
 
-            <TopBar />
+            <DashTop />
+            {/* Serves as the mobile dashboard menu too ^^' */}
             <main className={styles.main}>
                 <section className={styles.dashboardfuck}>
                     <SideBar />
                     <section className={styles.dashboardConfig}>
-                        <DashTop />
                         <h1 style={{ textAlign: 'center' }} className={styles.dashboardYouSent}>Configure Webhooks</h1>
                         <div className={styles.configureOption}>
                             <div className={styles.configureOptionText} style={{ marginBottom: '20px' }}>

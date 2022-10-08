@@ -32,12 +32,8 @@ export default function Home(props) {
             setHREF('/dashboard')
             setText('Get emailin\'')
         }
-        setSent(round(`${props.allSent.stats}`, 50, 'up'))
+        setSent(round(`${props.allSent.stats}`, 1000, 'up'))
     }, [status, props.allSent.status])
-
-    useEffect(() => {
-        setSent(round(`${props.allSent.stats}`, 50, 'up'))
-    }, [props.allSent.status])
 
 
     useEffect(() => {
@@ -140,7 +136,7 @@ export default function Home(props) {
 
                 <section className={styles.miniHomeSection} style={{ marginBottom: '100px' }}>
                     <h1 className={styles.miniSectionText} style={{ maxWidth: '600px' }}>
-                        Over <CountUp start={0} end={sent} duration={3.69} separator="," suffix=" emails" onEnd={() => console.log('Ended! 👏')} onStart={() => console.log('Started! 💨')} /> sent using Takeout
+                        Over <CountUp start={0} end={sent} duration={4} separator="," suffix=" emails" /> sent using Takeout
                     </h1>
                 </section>
 
@@ -148,7 +144,7 @@ export default function Home(props) {
                 <section className={styles.furtherSections} style={{ marginBottom: '100px' }} id="sectionContent">
                     <div className={styles.firstDivText}>
                         <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
-                            Set up Takeout <b>in minutes</b>
+                            Set Takeout up <b>in minutes</b>
                         </h1>
                         <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
                             With easy to use packages (JavaScript and Python, more coming soon) and a simple yet well-documented API allows developers to quickly send emails using any programming language and an internet connection.
@@ -165,7 +161,7 @@ export default function Home(props) {
                     </div>
 
                     <div className={styles.secondDivImage}>
-                        <img src="code/code2.gif" className={styles.marketingImageHome} />
+                        <img src="code/odp.png" className={styles.marketingImageHome} />
                     </div>
                 </section>
 

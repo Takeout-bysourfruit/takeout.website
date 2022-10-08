@@ -21,15 +21,16 @@ export default function Dashboard(props) {
     const [loading, setLoading] = useState(true);
     const [userToken, setToken] = useState('')
     const [seeCreds, setCredVis] = useState(false);
+
     function toggleVis() {
         setCredVis(!seeCreds);
     }
+    
 
     useEffect(() => {
         const { name, email, token, plan } = props.userData
         setToken(token)
-        setLoading(false)
-
+        setLoading(false)  
     }, [props])
 
 
@@ -68,16 +69,17 @@ export default function Dashboard(props) {
                 <Loader />
             )}
 
-            <TopBar />
+            <DashTop />
+            {/* Serves as the mobile dashboard menu too ^^' */}
             <main className={styles.main}>
                 <section className={styles.dashboardfuck}>
                     <SideBar/>
                     <section className={styles.dashboardRecent}>
-                    <DashTop/>
                         <h1 style={{textAlign: 'center'}} className={styles.dashboardYouSent}>Your credentials</h1>
                         <div className={styles.credentials}>
                             <h2 className={styles.credText}>
 
+                                <a className={styles.showHideCred} onClick={() => {navigator.clipboard.writeText(userToken)}}><Icon.Clipboard weight='bold' className={styles.showHideIcon} /></a>
                                 <a className={styles.showHideCred} onClick={toggleVis}>{seeCreds ? <Icon.EyeSlash weight='bold' className={styles.showHideIcon} /> : <Icon.Eye weight='bold' className={styles.showHideIcon} />}</a>
                                 <span>{seeCreds ? userToken : '* * * * * * * * * * * * * * * * * * * * *'}</span>
 

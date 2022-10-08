@@ -73,20 +73,3 @@ export default function Home(props) {
         </div>
     )
 }
-
-/*
-            <TopBar />
-            <main className={styles.main} style={{ marginTop: '30px', minHeight: '40vh'}}>
-                <section className={styles.loginSection} style={{ marginBottom: '100px' }}>
-                    <h1 className={styles.hookText} style={{ marginBottom: '30px' }}>
-                        Login to Takeout
-                    </h1>
-                    <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
-                        Welcome back! You can login via GitHub using the button below.
-                    </h2>
-                    <a onClick={() => { signIn('github', { callbackUrl: '/flow/login' })}} className={styles.blueButton}>Login with GitHub</a>
-                </section>
-
-            </main>
-            <Footer />
-*/
