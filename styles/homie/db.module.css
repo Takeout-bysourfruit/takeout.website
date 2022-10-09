@@ -251,6 +251,8 @@
     margin-top: 15px;
 }
 
+
+
 /* recent */
 .dashboardRecent {
     text-align: left;
@@ -391,4 +393,46 @@
     padding: 10px 20px;
     /* I need to figure this out */
     font-size: 15px;
+}
+
+.willAnim:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+    animation: ellipsis steps(4,end) 900ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+  }
+  
+@keyframes ellipsis {
+    to {
+        width: 1.25em;    
+    }
+}
+
+
+ @-webkit-keyframes ellipsis {
+    to {
+        width: 1.25em;    
+    }
+}
+
+.error {
+    color: red;
+}
+
+.templates {
+    align-items: center;
+}
+
+.templateWidget {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
+    min-width: 200px;
+    width: auto;
+    max-width: 400px;
 }

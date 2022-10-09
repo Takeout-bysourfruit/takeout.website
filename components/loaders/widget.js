@@ -7,13 +7,11 @@ export default function WidgetLoading() {
     function getRandomMessage() {
         const msg = [
             "Making paper airplanes...",
-            "Throwing paper airplanes...",
-            "Making fun of SendGrid...",
             "Figuring out the fax machine...",
             "Booting up Windows Server 2008...",
-            "Taking data past TSA...",
-            "Getting hamsters to fetch data...",
-            "Repairing paper airplanes...",
+            "Bringing your data past TSA...",
+            "Our hamsters are fetching your emails...",
+            "Tip: You can send emails using Takeout"
         ]
 
         const chosenMsg = msg[Math.floor(Math.random() * msg.length)];

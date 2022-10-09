@@ -33,8 +33,6 @@ export default function Dashboard(props) {
     }, [props])
 
 
-    
-
     return (
         <div className={styles.container}>
             <Head>

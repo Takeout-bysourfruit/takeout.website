@@ -266,6 +266,46 @@ export default function Home(props) {
                 <section className={styles.furtherSections} style={{ marginBottom: '100px' }} id="sectionContent">
                     <div className={styles.firstDivText}>
                         <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
+                            The service with a <br/><b>✨ Cloud ✨</b>
+                        </h1>
+                        <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
+                            Takeout Cloud stores your recently sent emails (up to 48 hours) and your templates (indefinitely) that are retrievable using Takeout's packages or API.
+                        </h2>
+                        <div className={styles.buttonContainer}>
+                            <a href='/flow/on-board' className={styles.blueButton} style={{ verticalAlign: 'middle' }}>Sign up and float in the clouds <Icon.CaretRight className={styles.buttIcon} style={{ fontSize: '1.1rem' }} weight='bold' /> </a>
+                        </div>
+                        <br />
+                        <div className={styles.buttonTextInside2} style={{ lineHeight: '25px' }}>
+                            <b>*You won't actually float in clouds</b><br />
+                            {/*<span className={styles.skinnyText}>We'd love it if you <a className={styles.supportLink} href='https://twitter.com/intent/tweet?text=.%40useTakeout+I+got+an+idea%21'>tweeted at us!</a></span>*/}
+                            <span className={styles.skinnyText}>If you know how to accomplish such a feat, please <a className={styles.supportLink} href='https://twitter.com/useTakeout'>tweet at us.</a></span>
+                        </div>
+                    </div>
+
+                    <div className={styles.secondDivImage}>
+                        <img src="tcloud2.png" width='300px' />
+                    </div>
+                </section>
+
+                <section className={styles.miniHomeSection}>
+                    <div className={styles.textCunt}>
+                        <h1 className={styles.miniSectionText} >
+                            We're currently in beta
+                        </h1>
+                        <h2 className={styles.miniSectionMiniText}>
+                            Takeout launched in the early Fall of 2022 and certainly isn't perfect. We're trying to make it, though 😉. We'll be adding more and more features. Stay tuned!
+                        </h2>
+                    </div>
+                </section>
+
+
+                {/*<section className={styles.furtherSections} style={{ marginBottom: '100px' }} id="sectionContent">
+                <div className={styles.secondDivImage}>
+                        <img src="options.png" width='300px' />
+                    </div>
+
+                    <div className={styles.firstDivText}>
+                        <h1 className={styles.homeHook} style={{ marginBottom: '30px' }}>
                             The service that's <b>updated constantly.</b>
                         </h1>
                         <h2 className={styles.reelinText} style={{ marginBottom: '50px' }}>
@@ -278,26 +318,10 @@ export default function Home(props) {
                         <br />
                         <div className={styles.buttonTextInside2} style={{ lineHeight: '25px' }}>
                             <b>Have a suggestion for a new feature?</b><br />
-                            {/*<span className={styles.skinnyText}>We'd love it if you <a className={styles.supportLink} href='https://twitter.com/intent/tweet?text=.%40useTakeout+I+got+an+idea%21'>tweeted at us!</a></span>*/}
                             <span className={styles.skinnyText}>We'd love it if you <a className={styles.supportLink} href='https://twitter.com/useTakeout'>tweeted at us!</a></span>
                         </div>
                     </div>
-
-                    <div className={styles.secondDivImage}>
-                        <img src="options.png" width='300px' />
-                    </div>
-                </section>
-
-                <section className={styles.miniHomeSection}>
-                    <div className={styles.textCunt}>
-                        <h1 className={styles.miniSectionText} >
-                            We're currently in beta
-                        </h1>
-                        <h2 className={styles.miniSectionMiniText}>
-                            Takeout launched in August 2022, and certainly isn't perfect. We're trying to be, though 😉. We'll be adding more and more features over the next couple of months. Stay tuned!
-                        </h2>
-                    </div>
-                </section>
+                </section>*/}
 
             </main>
             <Footer />

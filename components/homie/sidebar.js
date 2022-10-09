@@ -26,12 +26,14 @@ export default function SideBar() {
                 <Icon.Envelope className={styles.icon} weight="bold" />
                 <a href="/dashboard/hermes/recent">Recent emails</a>
             </li>
-
             <li className={styles.sideBarLink}>
                 <Icon.IdentificationBadge className={styles.icon} weight="bold" />
                 <a href="/dashboard/hermes/credentials">Credentials</a>
             </li>
-
+            <li className={styles.sideBarLink}>
+                <Icon.CloudArrowUp className={styles.icon} weight="bold" />
+                <a href="/dashboard/hermes/templates">Cloud</a>
+            </li>
             <li className={styles.sideBarLink}>
                 <Icon.PaperPlaneTilt className={styles.icon} weight="bold" />
                 <a href="/#pricing">Takeout+</a>

@@ -8,7 +8,7 @@ import React from "react"
 
 import styles from '../../../styles/homie/db.module.css'
 import * as Icon from "phosphor-react";
-import Loader from '../../../components/loader'
+import Loader from '../../../components/loaders/loader'
 import TopBar from '../../../components/homie/topbar'
 import DashTop from '../../../components/homie/dashtop'
 import SideBar from '../../../components/homie/sidebar'
