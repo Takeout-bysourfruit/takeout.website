@@ -33,6 +33,7 @@ export default function TopBar() {
             <a href="/dashboard/hermes/webhooks">Webhooks</a>
             <a href="/dashboard/hermes/recent">Recent emails</a>
             <a href="/dashboard/hermes/credentials">Credentials</a>
+            <a href="/dashboard/hermes/templates">Cloud</a>
             <a href="/#pricing">Takeout+</a>
             </nav>
         </div>

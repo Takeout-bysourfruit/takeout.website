@@ -206,9 +206,9 @@ export default function Home(props) {
                             <ul className={styles.pricingList} style={{ marginBottom: '40px' }}>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Send up to 500 emails per month</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Access to Takeout's API/packages</li>
-                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> View recently sent emails</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Webooks</li>
                                 <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Setting a custom email</span></li>
+                                <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Takeout Cloud</span></li>
                                 <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Early-access to new features</span></li>
                                 <li className={styles.pricingListLI}><Icon.XSquare className={styles.xIcon} weight="bold" /> <span className={styles.striketh}>Priority Support</span></li>
                             </ul>
@@ -226,9 +226,9 @@ export default function Home(props) {
                             <ul className={styles.pricingList}>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Send unlimited emails</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Access to Takeout's API/packages</li>
-                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> View recently sent emails</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Webooks</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Setting a custom email</li>
+                                <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Takeout Cloud</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Early-access to new features</li>
                                 <li className={styles.pricingListLI}><Icon.CheckSquare className={styles.checkIcon} weight="bold" /> Priority Support</li>
                             </ul>

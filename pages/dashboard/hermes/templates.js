@@ -18,12 +18,13 @@ import { useState, useEffect } from 'react'
 
 export default function Dashboard(props) {
     const router = useRouter();
-
     const [uploaded, setUploading] = useState('Choose a file & upload')
-    const [ref, setRef] = useState(false)
+
     const [loading, setLoading] = useState(true)
     const [files, setFiles] = useState([])
     const [userToken, setToken] = useState('')
+
+    const [refreshKey, setRefreshKey] = useState(0);
 
     const refreshData = () => {
         console.log('Refreshing...')
@@ -41,8 +42,8 @@ export default function Dashboard(props) {
     useEffect(() => {
         const { token } = props.userData
         const input = document.getElementById('fileinput');
+
         const upload = (file) => {
-            setRef(true)
             if (file.size / (1024 ** 2) > 5) {
                 console.log(`More than, data: ${file.size} @ ${file.size / (1024 ** 2)}`)
                 setUploading(<span className={styles.error}>Your file is larger than 5MB</span>)
@@ -65,17 +66,17 @@ export default function Dashboard(props) {
                     })
                     .catch(function (error) {
                         setUploading(<span className={styles.error}>You've uploaded too many files.</span>)
+
                         console.log(error)
                         setTimeout(() => { setUploading('Choose a file & upload') }, 2500)
-                        setRef(false)
                     })
             }
         }
 
-        const onSelectFile = () => upload(input.files[0]);
+        const onSelectFile = () => {setRefreshKey(refreshKey => refreshKey + 1); upload(input.files[0])};
         input.addEventListener('change', onSelectFile, false);
 
-    }, [ref])
+    }, [refreshKey])
 
 
     return (
@@ -113,14 +114,14 @@ export default function Dashboard(props) {
                 <section className={styles.dashboardfuck}>
                     <SideBar />
                     <section className={styles.dashboardRecent}>
-                        <h1 style={{ textAlign: 'center' }} className={styles.dashboardYouSent}>The Cloud™ ALPHA</h1>
+                        <h1 style={{ textAlign: 'center' }} className={styles.dashboardYouSent}>Takeout Cloud</h1>
 
                         <section className={styles.dashboardConfig}>
                             <div className={styles.configureOption}>
                                 <div className={styles.configureOptionText} style={{ marginBottom: '20px' }}>
                                     <h2 className={styles.configureOptionHeading}>Upload an email template</h2>
                                     <h3 className={styles.configureOptionDesc}>
-                                        If you'd like Takeout Cloud to store your email templates in the cloud,
+                                        If you'd like Takeout Cloud to store your email templates (limited to 5),
                                         you can upload HTML and text files under 5MB here. You'll be able to retrieve them using the API, Takeout.js, and Takeout.py.
                                     </h3>
 
@@ -142,15 +143,17 @@ export default function Dashboard(props) {
                                     {!loading ? (
                                         <div className={styles.templates}>
                                             {files.length === 0 ? (
-                                                <h2 className={styles.dashboardYouDesc} style={{ textAlign: 'center' }}>
-                                                    You haven't sent any emails recently.
+                                                <h2 className={styles.configureOptionDesc} style={{ textAlign: 'left' }}>
+                                                    You haven't uploaded any templates yet.
                                                 </h2>
                                             ) :
                                                 files.map((file) => (
-                                                    <div key={file} className={styles.templateWidget} style={{ marginBottom: '10px' }}>
+                                                    <div id={file} key={file} className={styles.templateWidget} style={{ marginBottom: '10px' }}>
+                                                        <a href={`https://cdn-takeout.bysourfruit.com/cloud/read?name=${file.split('/')[1]}&token=${userToken}`}><Icon.Eye size={15} weight="bold"/></a>
+                                                        &nbsp;
                                                         <a href={`https://cdn-takeout.bysourfruit.com/cloud/download?name=${file}`}><Icon.ArrowDown size={15} weight="bold"/></a>
                                                         &nbsp;
-                                                        <a onClick={async () => { await fetch(`https://cdn-takeout.bysourfruit.com/cloud/delete?name=${file}&token=${userToken}`); refreshData()} }><Icon.Trash size={15} weight="bold" color="red" /></a>
+                                                        <a onClick={async () => { document.getElementById(file).style.opacity = '0.3'; document.getElementById(file).style.background = '#FF7F7F'; await fetch(`https://cdn-takeout.bysourfruit.com/cloud/delete?name=${file}&token=${userToken}`); refreshData()} }><Icon.Trash size={15} weight="bold" color="red" /></a>
                                                         &nbsp; &nbsp;
                                                         <b>{file.split('/')[1]}</b><br />
                                                     </div>
