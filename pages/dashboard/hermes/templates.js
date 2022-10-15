@@ -50,30 +50,37 @@ export default function Dashboard(props) {
                 setTimeout(() => { setUploading('Choose a file & upload') }, 1500)
                 return;
             } else {
-                console.log('a-OK')
-                setUploading(<span className={styles.willAnim}>Uploading</span>)
+                if (file.type.split('/')[1] === 'html' || file.type.split('/')[1] === 'plain' || file.type.split('/')[1] === 'rtf') {
+                    console.log('a-OK')
+                    setUploading(<span className={styles.willAnim}>Uploading</span>)
 
-                let formData = new FormData()
-                formData.set('file', file)
+                    let formData = new FormData()
+                    formData.set('file', file)
 
-                axios.post(`https://cdn-takeout.bysourfruit.com/cloud/upload?token=${token}`, formData, {
-                    headers: { 'Content-Type': 'multipart/form-data' }
-                })
-                    .then(function (response) {
-                        setUploading('Uploaded!')
-                        refreshData()
-                        setTimeout(() => { setUploading('Choose a file & upload') }, 2500)
+                    axios.post(`https://cdn-takeout.bysourfruit.com/cloud/upload?token=${token}`, formData, {
+                        headers: { 'Content-Type': 'multipart/form-data' }
                     })
-                    .catch(function (error) {
-                        setUploading(<span className={styles.error}>You've uploaded too many files.</span>)
+                        .then(function (response) {
+                            setUploading('Uploaded!')
+                            refreshData()
+                            setTimeout(() => { setUploading('Choose a file & upload') }, 2500)
+                        })
+                        .catch(function (error) {
+                            setUploading(<span className={styles.error}>You've uploaded too many files.</span>)
 
-                        console.log(error)
-                        setTimeout(() => { setUploading('Choose a file & upload') }, 2500)
-                    })
+                            console.log(error)
+                            setTimeout(() => { setUploading('Choose a file & upload') }, 2500)
+                        })
+                } else {
+                    console.log(`File format is wrong, bitch.`)
+                    setUploading(<span className={styles.error}>Your file's format isn't supported</span>)
+                    setTimeout(() => { setUploading('Choose a file & upload') }, 1500)
+                    return;
+                }
             }
         }
 
-        const onSelectFile = () => {setRefreshKey(refreshKey => refreshKey + 1); upload(input.files[0])};
+        const onSelectFile = () => { setRefreshKey(refreshKey => refreshKey + 1); upload(input.files[0]) };
         input.addEventListener('change', onSelectFile, false);
 
     }, [refreshKey])
@@ -139,7 +146,7 @@ export default function Dashboard(props) {
                             <div className={styles.configureOption}>
                                 <div className={styles.configureOptionText} style={{ marginBottom: '20px' }}>
                                     <h2 className={styles.configureOptionHeading}>Your templates</h2>
-                                    <br/>
+                                    <br />
                                     {!loading ? (
                                         <div className={styles.templates}>
                                             {files.length === 0 ? (
@@ -149,11 +156,11 @@ export default function Dashboard(props) {
                                             ) :
                                                 files.map((file) => (
                                                     <div id={file} key={file} className={styles.templateWidget} style={{ marginBottom: '10px' }}>
-                                                        <a href={`https://cdn-takeout.bysourfruit.com/cloud/read?name=${file.split('/')[1]}&token=${userToken}`}><Icon.Eye size={15} weight="bold"/></a>
+                                                        <a href={`https://cdn-takeout.bysourfruit.com/cloud/read?name=${file.split('/')[1]}&token=${userToken}`}><Icon.Eye size={15} weight="bold" /></a>
                                                         &nbsp;
-                                                        <a href={`https://cdn-takeout.bysourfruit.com/cloud/download?name=${file}`}><Icon.ArrowDown size={15} weight="bold"/></a>
+                                                        <a href={`https://cdn-takeout.bysourfruit.com/cloud/download?name=${file}`}><Icon.ArrowDown size={15} weight="bold" /></a>
                                                         &nbsp;
-                                                        <a onClick={async () => { document.getElementById(file).style.opacity = '0.3'; document.getElementById(file).style.background = '#FF7F7F'; await fetch(`https://cdn-takeout.bysourfruit.com/cloud/delete?name=${file}&token=${userToken}`); refreshData()} }><Icon.Trash size={15} weight="bold" color="red" /></a>
+                                                        <a onClick={async () => { document.getElementById(file).style.opacity = '0.3'; document.getElementById(file).style.background = '#FF7F7F'; await fetch(`https://cdn-takeout.bysourfruit.com/cloud/delete?name=${file}&token=${userToken}`); refreshData() }}><Icon.Trash size={15} weight="bold" color="red" /></a>
                                                         &nbsp; &nbsp;
                                                         <b>{file.split('/')[1]}</b><br />
                                                     </div>

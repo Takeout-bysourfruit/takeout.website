@@ -15,7 +15,7 @@ export default function TopBar() {
                 <a href="/"><img alt="logo" height="50px" src="https://i.ibb.co/nD4MxFg/Takeout-text-logo-2.png" /></a>
             </h1>
             <ul className={styles.menuOptions}>
-                <li className={styles.menuOption}><a href="#pricing">Pricing</a></li>
+                <li className={styles.menuOption}><a href="/#pricing">Pricing</a></li>
                 <li className={styles.menuOption}><a href="https://github.com/Takeout-bysourfruit/takeout.docs">Docs</a></li>
                 <li style={{display: `${isNone}`}} className={styles.menuOption}><a href={session ? "/dashboard" : ""}>{session && 'Dashboard' }</a></li>
                 <li className={styles.menuOption}><a href={session ? "/flow/sign-out" : "/flow/login"}>{session ? 'Sign out' : 'Login'}</a></li>

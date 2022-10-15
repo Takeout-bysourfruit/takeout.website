@@ -53,7 +53,7 @@ export default function Dashboard(props) {
                 <meta name="twitter:description" content="A simple, affordable, developer-oriented email service." />
                 <meta name="twitter:image" content="https://i.ibb.co/28RgWJs/takeout.png" />
                 <meta name="twitter:image:alt" content="Takeout" />
-
+                
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -83,8 +83,8 @@ export default function Dashboard(props) {
                                 <span>{seeCreds ? userToken : '* * * * * * * * * * * * * * * * * * * * *'}</span>
 
                                 <br /><br />
-                                Use this to send emails using Takeout.js, Takeout.py, or via a POST request.
-                                If your token leaks, contact us immediately and we'll try to assist you.
+                                Use this API key whenever you need it, like when using Takeout.js, Takeout.py, or the API.
+                                If your key leaks, contact us immediately and we'll try to assist you.
                                 <br /><br /><br/>
                                 <a href="https://github.com/Takeout-bysourfruit/takeout.docs" className={styles.blueButton}>Read the documentation</a>
                             </h2>
