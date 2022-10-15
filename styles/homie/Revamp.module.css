@@ -3,7 +3,7 @@
 }
 
 
-.firstHomeSection, .furtherSections {
+.firstHomeSection, .furtherSections, .statusSection {
     display: flex;
     max-width: 900px;
     margin: auto;
@@ -17,6 +17,60 @@
     transition: all 1s;
     filter: blur(5px);
     transform: translateX(-100%);
+}
+
+.statusSection {
+    gap: 0;
+}
+
+.statusMore {
+    max-width: 500px;
+    text-align: left !important;
+    display: grid;
+    grid-template-columns: 250px 250px;
+}
+
+.statusWidget {
+    width: 500px;
+    min-width: 200px;
+    height: 45px;
+    padding: 10px;
+    line-height: 15px;
+    font-size: 18px;
+}
+
+.lastUpdatedWidget {
+    width: 500px;
+    min-width: 220px;
+    margin-top: 10px;
+    line-height: 15px;
+    columns: 1/3;
+    text-align: center !important;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.greenCircle {
+    width: 13px;
+    height: 13px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.redCircle {
+    width: 13px;
+    height: 13px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.statusDesc {
+    padding-top: 10px;
+    padding-left: 20px;
+    color: var(--text-light);
+    font-size: 14px;
 }
 
 .firstDivText {

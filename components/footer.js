@@ -21,6 +21,7 @@ export default function Footer() {
                         <h3 className={styles.linkHead}>Takeout</h3>
                         <li><a className={styles.link} href="/">Home</a></li>
                         <li><a className={styles.link} href="/#pricing">Pricing</a></li>
+                        <li><a className={styles.link} href="/system/status">System Status</a></li>
                         <li><a className={styles.link} href="https://github.com/Takeout-bysourfruit">GitHub</a></li>
                         <li><a className={styles.link} href="https://twitter.com/useTakeout">Twitter</a></li>
                         <li><a className={styles.link} href={session ? "/flow/sign-out" : "/flow/login"}>{session ? 'Sign out' : 'Login'}</a></li>
@@ -34,6 +35,7 @@ export default function Footer() {
                         <li><a className={styles.link} href="https://github.com/Takeout-bysourfruit/takeout.docs">Takeout API</a></li>
                         <li><a className={styles.link} href="">&nbsp;</a></li>
                         <li><a className={styles.link} href="">&nbsp;</a></li>
+                        <li><a className={styles.link} href="">&nbsp;</a></li>
                     </ul>
                 </div>
                 <div className={styles.footerColumn}>
@@ -41,6 +43,7 @@ export default function Footer() {
                         <h3 className={styles.linkHead}>Sourfruit</h3>
                         <li><a className={styles.link} href="https://def-not-hacking-the.net">Website</a></li>
                         <li><a className={styles.link} href="https://twitter.com/s0urfruit">Twitter</a></li>
+                        <li><a className={styles.link} href="https://github.com/s0urfruit">GitHub</a></li>
                         <li><a className={styles.link} href="mailto:hello@def-not-hacking-the.net?subject=So... about Takeout">Contact</a></li>
                         <li><a className={styles.link} href="https://bysourfruit.com">bysourfruit.com</a></li>
                         <li><a className={styles.link} href="https://support.discord.com/hc/en-us/articles/218344397-How-do-I-add-my-friend-to-my-friends-list-">s0urfruit#3033</a></li>

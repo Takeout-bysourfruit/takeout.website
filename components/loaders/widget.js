@@ -10,7 +10,7 @@ export default function WidgetLoading() {
             "Figuring out the fax machine...",
             "Booting up Windows Server 2008...",
             "Bringing your data past TSA...",
-            "Our hamsters are fetching your emails...",
+            "Our hamsters are fetching your data...",
             "Tip: You can send emails using Takeout"
         ]
 

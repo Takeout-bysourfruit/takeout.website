@@ -258,10 +258,11 @@
 
 
 .spinnerContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: 100% !important;
+    align-items: center !important;
+    text-align: center !important;
 }
